@@ -23,7 +23,7 @@ const getAllItems = asyncHandler(async (req, res) => {
 
 
 const createNewItem = asyncHandler(async (req, res) => {
-    const { name, unitMeasure, price, image, now, description, qty } = req.body
+    const { name, unitMeasure, price, image, now, description, category, qty } = req.body
     console.log({qty})
     const items = await Item.find()
     const date = now
@@ -44,7 +44,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     }
 
 
-    const itemObject = {name, unitMeasure, price, qty, date, img, description}
+    const itemObject = {name, unitMeasure, price, qty, date, img, description, category}
 
     // Create and store new item 
     const item = await Item.create(itemObject)
