@@ -1,36 +1,39 @@
-const mongoose = require('mongoose')
-const AutoIncrement = require('mongoose-sequence')(mongoose)
+const mongoose = require("mongoose");
+const AutoIncrement = require("mongoose-sequence")(mongoose);
 
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema;
 
-const itemSchema = new Schema(
-    {
-        
-        name: {
-            type: String,
-            // required: true
-        },
-        unitMeasure: {
-            type: String,
-            // required: true
-        },
-        price: {
-            type: Number,
-            // requred: true
-        },
-        qty: {
-            type: Number,
-            // required: true
-        },
-        img: {
-            type: Array,
-            
-        },
-        description: {
-            type: String
-        },
-        date: {type: String, required: true}
-    }
-)
+const itemSchema = new Schema({
+  name: {
+    type: String,
+    // required: true
+  },
+  unitMeasure: {
+    type: String,
+    // required: true
+  },
+  price: {
+    type: Number,
+    // requred: true
+  },
+  qty: {
+    type: Number,
+    // required: true
+  },
+  img: {
+    type: Array,
+  },
+  description: {
+    type: String,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  gender: {
+    type: String,
+  },
+  date: { type: String, required: true },
+});
 
-module.exports = mongoose.model('Item', itemSchema)
+module.exports = mongoose.model("Item", itemSchema);

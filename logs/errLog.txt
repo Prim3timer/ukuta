@@ -126,3 +126,10 @@
 2026 01 27	10:19:57	ba50fe31-a723-4293-b7cd-e5b480c4be5c	Error: No such checkout.session: null
 2026 01 27	10:20:37	936f9621-e2e1-4b04-aa1d-3cabcb630297	Error: No such checkout.session: null
 2026 01 27	10:20:51	dfaa68ea-9172-42b8-8471-3b02743253e7	Error: No such checkout.session: null
+2026 02 02	00:45:36	f349b95d-2f2a-4838-b1ec-d40a07e0291d	ReferenceError: size is not defined
+2026 02 02	06:33:39	d5681d2f-9367-4c6f-b9d8-9c8a0f92504c	TypeError: Cannot read properties of undefined (reading 'name')
+2026 02 02	06:35:46	f97f8c8b-1583-41f3-84c7-2723124ccc0c	ReferenceError: cart is not defined
+2026 02 02	06:42:32	7cfe11b4-260a-4026-ad17-7b8e85e748c0	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2026 02 02	06:43:47	0ed41836-ff4e-4ba4-a55f-cc077f67af6b	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2026 02 02	06:44:47	96c6d32e-ef8d-41d1-bfd1-64363b9c7ad1	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
+2026 02 02	08:02:47	73e7a694-8287-4722-8d61-585798ab621b	ValidationError: Item validation failed: gender: Cast to string failed for value "[ 'Men', 'Women' ]" (type Array) at path "gender"
