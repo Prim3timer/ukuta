@@ -133,3 +133,5 @@
 2026 02 02	06:43:47	0ed41836-ff4e-4ba4-a55f-cc077f67af6b	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
 2026 02 02	06:44:47	96c6d32e-ef8d-41d1-bfd1-64363b9c7ad1	TypeError: Cannot read properties of undefined (reading 'unitMeasure')
 2026 02 02	08:02:47	73e7a694-8287-4722-8d61-585798ab621b	ValidationError: Item validation failed: gender: Cast to string failed for value "[ 'Men', 'Women' ]" (type Array) at path "gender"
+2026 02 02	09:57:10	91dd7c40-e898-46ba-b203-ae56e2070297	Error: ENOTEMPTY: directory not empty, rmdir 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Lofas'
+2026 02 02	10:15:30	d3655086-1a78-4d4a-a4f5-4db7e04d1671	URIError: Failed to decode param 'Samsung%20Galaxy%20Fold%20Z%20Fold%20%'
