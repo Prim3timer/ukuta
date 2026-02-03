@@ -135,3 +135,20 @@
 2026 02 02	08:02:47	73e7a694-8287-4722-8d61-585798ab621b	ValidationError: Item validation failed: gender: Cast to string failed for value "[ 'Men', 'Women' ]" (type Array) at path "gender"
 2026 02 02	09:57:10	91dd7c40-e898-46ba-b203-ae56e2070297	Error: ENOTEMPTY: directory not empty, rmdir 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Lofas'
 2026 02 02	10:15:30	d3655086-1a78-4d4a-a4f5-4db7e04d1671	URIError: Failed to decode param 'Samsung%20Galaxy%20Fold%20Z%20Fold%20%'
+2026 02 02	11:35:03	1846ceb6-7365-431d-8481-dc756926ea7e	TypeError: Cannot read properties of undefined (reading 'size')
+2026 02 02	20:14:56	0514c765-a042-4150-b54d-0a42e2b6066e	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:14:59	0da4aceb-5e02-41ab-bae8-312079597192	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:14:59	d169c6e6-25d4-4bbd-9736-7a404fda0419	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:14:59	0419c1f1-ac88-4d1e-89a6-92b898cb56dc	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:05	4ace2e38-343c-45ec-9084-28b06a439394	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:05	11cf1f3b-d7fb-46a0-89f8-ecfea110e685	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:05	4e763a9a-792c-4c0e-8fc7-17441107c552	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:10	80c5d3ff-c6b8-4bb9-9def-a7426a428189	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:10	e43cbea5-07b1-470e-b742-d74f09d01e46	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:10	9b07567a-0ed2-42dd-9534-c5f0fd5b49d7	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:18	be13f335-f46e-4b19-a32b-92f473cecbcb	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:18	97f5e78f-9d4d-44be-9577-5b380940dd6a	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:18	74acc1b8-395a-457b-952d-b27b76552f28	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:19	51a91176-0101-4303-bbbf-d8e36aa3f2f6	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:19	883e5991-d34b-4f0d-97b8-f2d51588da58	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 02	20:15:19	1cbdae57-7973-4ef1-88b7-45d8bfbeba74	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net

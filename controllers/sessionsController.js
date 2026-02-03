@@ -6,9 +6,9 @@ const { format } = require("date-fns");
 const { json } = require("express");
 const express = require("express");
 const app = express();
-// const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 // const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
-const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
+// const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
 
 // Rhinohorn1#
 const makePayment = async (req, res) => {
@@ -145,7 +145,12 @@ const thanksAlert = asyncHandler(async (req, res) => {
     const { amount_subtotal, amount_total, price, quantity, description, id } =
       item;
 
-    console.log({ item });
+    const cartItemSizes = currentUser.cart.find(
+      (item) => item.name === description,
+    ).size;
+
+    console.log({ cartItemSizes });
+
     const { unit_amount } = price;
     const stringized = JSON.stringify(sessions2);
     const jsonized = JSON.parse(stringized, null, 2);
@@ -181,7 +186,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
         price: dynamicPrice,
         qty: dynamicQty,
         name: description,
-        size: sessions2.metadata.size || specCartProps.size,
+        size: sessions2.metadata.size || cartItemSizes,
       };
     }
   });
