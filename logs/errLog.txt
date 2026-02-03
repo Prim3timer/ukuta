@@ -152,3 +152,6 @@
 2026 02 02	20:15:19	51a91176-0101-4303-bbbf-d8e36aa3f2f6	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
 2026 02 02	20:15:19	883e5991-d34b-4f0d-97b8-f2d51588da58	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
 2026 02 02	20:15:19	1cbdae57-7973-4ef1-88b7-45d8bfbeba74	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 03	08:06:23	c2e0d828-12d7-4b21-85fa-0c02ac046b80	TypeError: Cannot read properties of undefined (reading 'size')
+2026 02 03	08:07:36	236f0ea1-7692-4aa4-9c39-d2accb825233	TypeError: Cannot read properties of undefined (reading 'size')
+2026 02 03	08:11:12	450ed259-abfa-408d-a930-c0dc4ceb86cf	TypeError: Cannot read properties of undefined (reading 'size')

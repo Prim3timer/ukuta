@@ -140,16 +140,14 @@ const thanksAlert = asyncHandler(async (req, res) => {
   //   });
   // neededProps properties are unit_amount(price), description(name), quantity, sub total
   const cartItems = await Item.find();
-  console.log({ cartItems });
+  // console.log({ cartItems });
   const neededProps = lineItems.data.map((item) => {
     const { amount_subtotal, amount_total, price, quantity, description, id } =
       item;
 
-    const cartItemSizes = currentUser.cart.find(
-      (item) => item.name === description,
-    ).size;
+    const cartItem = currentUser.cart.find((item) => item.name === description);
 
-    console.log({ cartItemSizes });
+    console.log({ cartItem });
 
     const { unit_amount } = price;
     const stringized = JSON.stringify(sessions2);
@@ -186,7 +184,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
         price: dynamicPrice,
         qty: dynamicQty,
         name: description,
-        size: sessions2.metadata.size || cartItemSizes,
+        size: sessions2?.metadata?.size || cartItem?.size,
       };
     }
   });
