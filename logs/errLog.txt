@@ -155,3 +155,4 @@
 2026 02 03	08:06:23	c2e0d828-12d7-4b21-85fa-0c02ac046b80	TypeError: Cannot read properties of undefined (reading 'size')
 2026 02 03	08:07:36	236f0ea1-7692-4aa4-9c39-d2accb825233	TypeError: Cannot read properties of undefined (reading 'size')
 2026 02 03	08:11:12	450ed259-abfa-408d-a930-c0dc4ceb86cf	TypeError: Cannot read properties of undefined (reading 'size')
+2026 02 03	13:00:17	814f4dc8-5827-4c50-b113-d9cfb4704eca	ValidationError: Item validation failed: price: Cast to Number failed for value "35,96" (type string) at path "price"
