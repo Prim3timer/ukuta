@@ -30,6 +30,9 @@ const itemSchema = new Schema({
     type: String,
     required: true,
   },
+  colours: {
+    type: Array,
+  },
   gender: {
     type: String,
   },

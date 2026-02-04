@@ -82,6 +82,7 @@ const makePayment = async (req, res) => {
         userId,
         grandTotal: JSON.stringify(grandTotal * 100),
         size: name === "buy now" ? extraProps[0].size : "",
+        colour: name === "buy now" ? req.body[0].colour : "",
       },
     });
     res.status(200).json({
@@ -177,6 +178,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
       prod.unitMeasure === "Litre (L)"
         ? unit_amount * 10
         : unit_amount / 100;
+
     const adjustedSubtotal = amount_subtotal / 100;
     if (prod) {
       return {
@@ -185,6 +187,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
         qty: dynamicQty,
         name: description,
         size: sessions2?.metadata?.size || cartItem?.size,
+        colour: sessions2?.metadata?.colour || cartItem?.colour,
       };
     }
   });

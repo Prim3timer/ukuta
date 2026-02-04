@@ -156,3 +156,10 @@
 2026 02 03	08:07:36	236f0ea1-7692-4aa4-9c39-d2accb825233	TypeError: Cannot read properties of undefined (reading 'size')
 2026 02 03	08:11:12	450ed259-abfa-408d-a930-c0dc4ceb86cf	TypeError: Cannot read properties of undefined (reading 'size')
 2026 02 03	13:00:17	814f4dc8-5827-4c50-b113-d9cfb4704eca	ValidationError: Item validation failed: price: Cast to Number failed for value "35,96" (type string) at path "price"
+2026 02 03	18:35:09	13ea9f85-6b4d-4725-82a4-a4c5fd8002b4	Error: EPERM: operation not permitted, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Clippo' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Ceramic Blade Hair Clipper'
+2026 02 03	20:47:14	d5e9d35e-5df3-4f1a-a773-73d46dc83f17	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
+2026 02 03	20:50:03	0a77f6a7-eafc-43e0-8e4a-21f2cc12b424	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
+2026 02 03	21:58:30	e4563f5d-26fb-4ba0-a259-62c963fc5aff	TypeError: Cannot read properties of undefined (reading 'colour')
+2026 02 03	21:59:29	5ea8eb69-c17a-4d07-abb0-e93279b12b96	TypeError: Cannot read properties of undefined (reading 'colour')
+2026 02 03	22:01:10	bcfe77fa-2659-49c1-b8fb-4fe7bdb2506d	TypeError: Cannot read properties of undefined (reading 'colour')
+2026 02 03	22:07:08	ee9d42e3-879f-4765-b4ca-124a86b2d7e8	TypeError: Cannot read properties of undefined (reading 'colour')
