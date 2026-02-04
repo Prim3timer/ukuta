@@ -163,3 +163,6 @@
 2026 02 03	21:59:29	5ea8eb69-c17a-4d07-abb0-e93279b12b96	TypeError: Cannot read properties of undefined (reading 'colour')
 2026 02 03	22:01:10	bcfe77fa-2659-49c1-b8fb-4fe7bdb2506d	TypeError: Cannot read properties of undefined (reading 'colour')
 2026 02 03	22:07:08	ee9d42e3-879f-4765-b4ca-124a86b2d7e8	TypeError: Cannot read properties of undefined (reading 'colour')
+2026 02 04	10:43:54	cfbc003b-a82a-4632-ac37-2cc590f4eb93	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
+2026 02 04	10:45:09	a7883e24-203f-451c-bb42-cfa33f0f6848	ReferenceError: colours is not defined
+2026 02 04	11:38:13	d710e627-ad47-4293-a71b-ba75ee7b684d	ReferenceError: availableStorage is not defined

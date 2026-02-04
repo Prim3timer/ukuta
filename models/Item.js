@@ -30,7 +30,10 @@ const itemSchema = new Schema({
     type: String,
     required: true,
   },
-  colours: {
+  availableColours: {
+    type: Array,
+  },
+  availableStorage: {
     type: Array,
   },
   gender: {

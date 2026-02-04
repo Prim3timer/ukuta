@@ -83,6 +83,7 @@ const makePayment = async (req, res) => {
         grandTotal: JSON.stringify(grandTotal * 100),
         size: name === "buy now" ? extraProps[0].size : "",
         colour: name === "buy now" ? req.body[0].colour : "",
+        storage: name === "buy now" ? req.body[0].storage : "",
       },
     });
     res.status(200).json({
@@ -188,6 +189,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
         name: description,
         size: sessions2?.metadata?.size || cartItem?.size,
         colour: sessions2?.metadata?.colour || cartItem?.colour,
+        storage: sessions2?.metadata?.storage || cartItem?.storage,
       };
     }
   });

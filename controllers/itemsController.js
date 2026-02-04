@@ -30,7 +30,8 @@ const createNewItem = asyncHandler(async (req, res) => {
     category,
     gender,
     qty,
-    colours,
+    availableColours,
+    availableStorage,
   } = req.body;
   console.log({ qty });
   const items = await Item.find();
@@ -62,7 +63,8 @@ const createNewItem = asyncHandler(async (req, res) => {
     description,
     category,
     gender,
-    colours,
+    availableColours,
+    availableStorage,
   };
 
   // Create and store new item
