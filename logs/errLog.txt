@@ -166,3 +166,8 @@
 2026 02 04	10:43:54	cfbc003b-a82a-4632-ac37-2cc590f4eb93	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
 2026 02 04	10:45:09	a7883e24-203f-451c-bb42-cfa33f0f6848	ReferenceError: colours is not defined
 2026 02 04	11:38:13	d710e627-ad47-4293-a71b-ba75ee7b684d	ReferenceError: availableStorage is not defined
+2026 02 04	21:55:51	dbd0b3bc-c448-4b82-a7a6-7b8626c4c8b9	ReferenceError: price is not defined
+2026 02 04	22:00:04	bab871fc-fb08-44f8-89f9-114eb2bf3ba3	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
+2026 02 04	22:48:54	df8332cb-db36-4fb6-85a3-46ddc26fa829	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
+2026 02 04	22:48:57	673bd2aa-b146-4c35-982e-4a8505c6c8cb	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
+2026 02 05	08:33:51	db6c2fbe-2a59-419a-a764-f6adcd228748	ReferenceError: prices is not defined

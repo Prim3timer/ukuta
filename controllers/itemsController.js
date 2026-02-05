@@ -23,7 +23,7 @@ const createNewItem = asyncHandler(async (req, res) => {
   const {
     name,
     unitMeasure,
-    price,
+    availablePrices,
     image,
     now,
     description,
@@ -32,6 +32,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     qty,
     availableColours,
     availableStorage,
+    availableFootSizes,
   } = req.body;
   console.log({ qty });
   const items = await Item.find();
@@ -39,7 +40,7 @@ const createNewItem = asyncHandler(async (req, res) => {
   const img = image;
   console.log({ description });
   // Confirm data
-  if (!name || !unitMeasure || !price) {
+  if (!name || !unitMeasure || !availablePrices) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
@@ -56,7 +57,7 @@ const createNewItem = asyncHandler(async (req, res) => {
   const itemObject = {
     name,
     unitMeasure,
-    price,
+    availablePrices,
     qty,
     date,
     img,
@@ -65,6 +66,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     gender,
     availableColours,
     availableStorage,
+    availableFootSizes,
   };
 
   // Create and store new item

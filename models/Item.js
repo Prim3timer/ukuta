@@ -12,9 +12,9 @@ const itemSchema = new Schema({
     type: String,
     // required: true
   },
-  price: {
-    type: Number,
-    // requred: true
+  availablePrices: {
+    type: Array,
+    requred: true,
   },
   qty: {
     type: Number,
@@ -34,6 +34,9 @@ const itemSchema = new Schema({
     type: Array,
   },
   availableStorage: {
+    type: Array,
+  },
+  availableFootSizes: {
     type: Array,
   },
   gender: {

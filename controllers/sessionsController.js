@@ -63,8 +63,8 @@ const makePayment = async (req, res) => {
               item.unitMeasure === "Kilowatt (kW)" ||
               item.unitMeasure === "Pound (lbs)" ||
               item.unitMeasure === "Litre (L)"
-                ? (storeItem.price * 100) / 1000
-                : storeItem.price * 100,
+                ? (storeItem.availablePrices[0] * 100) / 1000
+                : storeItem.availablePrices[0] * 100,
             // unit_amount: storeItem.price * 100
           },
 
