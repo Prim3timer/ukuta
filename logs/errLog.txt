@@ -171,3 +171,4 @@
 2026 02 04	22:48:54	df8332cb-db36-4fb6-85a3-46ddc26fa829	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
 2026 02 04	22:48:57	673bd2aa-b146-4c35-982e-4a8505c6c8cb	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
 2026 02 05	08:33:51	db6c2fbe-2a59-419a-a764-f6adcd228748	ReferenceError: prices is not defined
+2026 02 06	12:23:14	d87e6df5-c4c6-449f-a9cb-066d4072f624	TypeError: Cannot set properties of null (setting 'refreshToken')
