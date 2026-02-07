@@ -172,3 +172,19 @@
 2026 02 04	22:48:57	673bd2aa-b146-4c35-982e-4a8505c6c8cb	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "Item"
 2026 02 05	08:33:51	db6c2fbe-2a59-419a-a764-f6adcd228748	ReferenceError: prices is not defined
 2026 02 06	12:23:14	d87e6df5-c4c6-449f-a9cb-066d4072f624	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 06	23:22:32	bd0b4e0a-38a6-4ed9-b766-c14b094d75f3	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:35	78eb1ad3-351c-43a4-ad30-9641765c9545	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:35	dd2776d1-e448-4d33-bab7-77f6bf60b691	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:35	cc746d09-081d-43dd-ba3d-7d81a133e432	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:37	28fa04bc-d687-4c44-ad8f-e95ceeb3ed16	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:37	317930b5-b741-410e-91d5-791c6cbb5c8f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:37	5a6c3f4a-15a4-4e7d-84a8-dc2731b4fa3e	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:41	ad461eda-5825-4855-b4e9-b082be458b18	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:41	486c9afd-dc89-43df-b4f3-49d885119603	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:41	93547eaa-75f5-43b1-ae52-b1a50e6b1cd7	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:44	40877ae7-31db-47b9-89e0-0a94ff37606f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:44	70ff77fe-6e24-45a7-bf8f-3bf132086224	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:44	7cba28ec-97b5-453f-9569-c208b8b62add	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:47	88527c87-be77-47cb-9ca3-c5f977861548	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:47	daa0dd2a-26ff-464a-b06e-3b63e9682de0	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 06	23:22:47	e1418ba7-d499-46bc-9652-8436e6eef5cf	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
