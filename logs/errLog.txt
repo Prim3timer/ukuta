@@ -188,3 +188,6 @@
 2026 02 06	23:22:47	88527c87-be77-47cb-9ca3-c5f977861548	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 2026 02 06	23:22:47	daa0dd2a-26ff-464a-b06e-3b63e9682de0	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 2026 02 06	23:22:47	e1418ba7-d499-46bc-9652-8436e6eef5cf	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 08	10:24:52	c40667c6-459b-46a8-aa0c-4f09c7aec899	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 08	10:24:52	0d97ccf4-f094-4ead-96d9-582981ba4203	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 02 08	10:24:52	79f8f8dd-72c9-4e74-940a-e2483af33008	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
