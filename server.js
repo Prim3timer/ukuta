@@ -29,19 +29,6 @@ app.use(express.json());
 
 app.use(cookieParser());
 
-const swapper = async (req, res) => {
-  const items = await Item.find();
-  const electronicsItems = items.filter(
-    (item) => item.category === "Electronics",
-  );
-  const temp = electronicsItems[0];
-  electronicsItems[0] = electronicsItems[6];
-  electronicsItems[6] = temp;
-  console.log(electronicsItems);
-};
-
-swapper();
-
 const storage = multer.diskStorage({
   destination: async (req, file, cb) => {
     // const { name, unitMeasure, price, image, now  } = req.body

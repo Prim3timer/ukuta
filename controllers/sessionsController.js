@@ -12,13 +12,9 @@ const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
 
 // Rhinohorn1#
 
-const swapper = () => {
-  console.log("swapper on duty");
-};
-
-swapper();
 const makePayment = async (req, res) => {
   console.log({ reqBody: req.body });
+
   const fromFront = req.body;
   // for the receipt generation, i'll need the:
   // id, transQty, price from each item and
@@ -69,8 +65,9 @@ const makePayment = async (req, res) => {
               item.unitMeasure === "Kilowatt (kW)" ||
               item.unitMeasure === "Pound (lbs)" ||
               item.unitMeasure === "Litre (L)"
-                ? (storeItem.availablePrices[0] * 100) / 1000
-                : storeItem.availablePrices[0] * 100,
+                ? // changing the pice based on storage size
+                  (storeItem.availablePrices[item.priceIndex] * 100) / 1000
+                : storeItem.availablePrices[item.priceIndex] * 100,
             // unit_amount: storeItem.price * 100
           },
 
