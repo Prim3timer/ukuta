@@ -11,6 +11,12 @@ const app = express();
 const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
 
 // Rhinohorn1#
+
+const swapper = () => {
+  console.log("swapper on duty");
+};
+
+swapper();
 const makePayment = async (req, res) => {
   console.log({ reqBody: req.body });
   const fromFront = req.body;
