@@ -145,6 +145,23 @@ app.delete("/delete-pic/:initialPic", async (req, res) => {
   }
 });
 
+// app.get("/gendered", async (req, res) => {
+//   const response = await Item.updateMany(
+//     { gender: "men" },
+//     {
+//       $set: { gender: "gentlemen" },
+//     },
+//   );
+
+//   const response2 = await Item.updateMany(
+//     { gender: "women" },
+//     {
+//       $set: { gender: "ladies" },
+//     },
+//   );
+//   res.json({ message: { response, response2 } });
+// });
+
 app.use("/", express.static(path.join(__dirname, "public")));
 
 app.use("/", require("./routes/root"));

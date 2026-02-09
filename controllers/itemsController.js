@@ -62,7 +62,10 @@ const createNewItem = asyncHandler(async (req, res) => {
     date,
     img,
     description,
-    category,
+    category:
+      category === "Foot Wears"
+        ? "Foot WearsShoesSlippersBootsSneakersSandals"
+        : category,
     gender,
     availableColours,
     availableStorage,
