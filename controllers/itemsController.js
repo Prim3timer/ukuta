@@ -196,7 +196,7 @@ const updateItemTexts = asyncHandler(async (req, res) => {
       {
         name,
         unitMeasure,
-        price: Number(price),
+        availablePrices: price,
         qty: Number(quantity),
         description,
         date,
