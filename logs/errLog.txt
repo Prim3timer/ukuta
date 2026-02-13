@@ -237,3 +237,4 @@
 2026 02 10	21:51:24	6d12a3dd-7f90-41b5-8fe3-2351c06261b1	URIError: Failed to decode param 'CAPNOS%20ZERO%20%7C%20Peppermint%20Flavored%20Air%20Inhaler,%200%%20Nicotine%20%7C%20Pressurized'
 2026 02 10	22:02:43	584caff2-1375-48b4-bf54-48a309b3bf5f	URIError: Failed to decode param 'CAPNOS%20E-Z%20Flavored%20Air%20Inhaler,%200%%20Nicotine%20Lightweight%20&%20Effortless%20Draw'
 2026 02 12	11:21:26	3e6feee0-f218-4143-ad74-649d1a5d75eb	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 12	22:16:23	5d5fad65-8cac-41da-98dd-3306c4ed6b36	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
