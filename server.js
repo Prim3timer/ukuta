@@ -174,6 +174,8 @@ app.use("/refresh", require("./routes/refreshRoutes"));
 
 app.use("/transactions", require("./routes/transactionRoutes"));
 app.use("/items", require("./routes/itemRoutes"));
+app.use("/items", require("./routes/itemRoutes"));
+app.use("/grocery-items", require("./routes/groceryItemRoutes"));
 app.use(verifyJWT);
 app.use("/users", require("./routes/userRoutes"));
 
