@@ -21,7 +21,7 @@ const groceryItemSchema = new Schema({
     // required: true
   },
   img: {
-    type: Array,
+    type: String,
   },
   description: {
     type: String,

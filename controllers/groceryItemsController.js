@@ -20,71 +20,80 @@ const getAllItems = asyncHandler(async (req, res) => {
 });
 
 const createNewItem = asyncHandler(async (req, res) => {
-  const {
-    name,
-    unitMeasure,
-    availablePrices,
-    image,
-    now,
-    description,
-    category,
-    gender,
-    qty,
-    availableColours,
-    availableStorage,
-    availableFootSizes,
-  } = req.body;
-  console.log({ qty });
-  const items = await GroceryItem.find();
-  const date = now;
-  const img = image;
-  console.log({ description });
-  // Confirm data
-  if (!name || !unitMeasure || !availablePrices) {
-    return res.status(400).json({ message: "All fields are required" });
-  }
+  console.log({ reqBody: req.body });
+  res.send("item created");
+  // const {
+  //   name,
+  //   unitMeasure,
+  //   availablePrices,
+  //   image,
+  //   now,
+  //   description,
+  //   category,
+  //   gender,
+  //   qty,
+  //   availableColours,
+  //   availableStorage,
+  //   availableFootSizes,
+  // } = req.body;
+  // console.log({ qty });
+  // const items = await GroceryItem.find();
+  // const date = now;
+  // const img = image;
+  // console.log({ description });
+  // // Confirm data
+  // if (!name || !unitMeasure || !availablePrices) {
+  //   return res.status(400).json({ message: "All fields are required" });
+  // }
 
-  // Check for duplicate username
-  const duplicate = await GroceryItem.findOne({ name, unitMeasure })
-    .collation({ locale: "en", strength: 2 })
-    .lean()
-    .exec();
+  // // Check for duplicate username
+  // const duplicate = await GroceryItem.findOne({ name, unitMeasure })
+  //   .collation({ locale: "en", strength: 2 })
+  //   .lean()
+  //   .exec();
 
-  if (duplicate) {
-    return res.status(409).json({ message: "Duplicate item" });
-  }
+  // if (duplicate) {
+  //   return res.status(409).json({ message: "Duplicate item" });
+  // }
 
-  const itemObject = {
-    name,
-    unitMeasure,
-    availablePrices,
-    qty,
-    date,
-    img,
-    description,
-    category:
-      category === "Foot Wears"
-        ? "Foot WearsShoesSlippersBootsSneakersSandals"
-        : category,
-    gender,
-    availableColours,
-    availableStorage,
-    availableFootSizes,
-  };
+  // const itemObject = {
+  //   name,
+  //   unitMeasure,
+  //   availablePrices,
+  //   qty,
+  //   date,
+  //   img,
+  //   description,
+  //   category:
+  //     category === "Foot Wears"
+  //       ? "Foot WearsShoesSlippersBootsSneakersSandals"
+  //       : category,
+  //   gender,
+  //   availableColours,
+  //   availableStorage,
+  //   availableFootSizes,
+  // };
 
-  // Create and store new item
-  const item = await GroceryItem.create(itemObject);
+  // // Create and store new item
+  // const item = await GroceryItem.create(itemObject);
 
-  if (item) {
-    //created
+  // if (item) {
+  //   //created
 
-    res.status(201).json({ message: `New item ${name} created` });
-  } else {
-    res.status(400).json({ message: "Invalid item data received" });
-  }
+  //   res.status(201).json({ message: `New item ${name} created` });
+  // } else {
+  //   res.status(400).json({ message: "Invalid item data received" });
+  // }
+});
+
+const mekaSomething = asyncHandler(async (req, res) => {
+  const alert = "checking for mama";
+  console.log({ alert });
+  res.send(alert);
 });
 
 module.exports = {
+  mekaSomething,
   getAllItems,
   createNewItem,
 };

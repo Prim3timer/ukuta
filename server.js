@@ -109,6 +109,12 @@ app.patch("/items/pic/:name", upload.single("image"), async (req, res) => {
   }
   res.json({ message: "image successfully uploaded" });
 });
+app.post("/items/pic/:name", upload.single("image"), async (req, res) => {
+  console.log({ file: req.file });
+  const { name } = req.params;
+
+  res.json({ message: "image successfully uploaded" });
+});
 
 // for deleting a single image from the collage
 app.delete("/delete-pic/:initialPic", async (req, res) => {

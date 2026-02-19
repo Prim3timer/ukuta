@@ -242,3 +242,7 @@
 2026 02 17	22:49:10	8248d950-d0eb-4c29-a0d6-7f6b4af823d1	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
 2026 02 17	22:49:45	3e4ad90d-9916-4dd0-8bae-aeb15269d594	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
 2026 02 17	22:50:05	eb7eb300-d960-4d14-9855-8dc8d0ce6cfb	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 02 18	22:05:39	43618c6f-c367-4b49-8d1b-0ed5704f911d	MulterError: Unexpected field
+2026 02 18	22:07:08	49f15f89-0c18-47de-8b2f-92543ca2ef2e	MulterError: Unexpected field
+2026 02 18	22:08:58	71ff17b9-206e-43ef-940a-b9f3788b58d2	MulterError: Unexpected field
+2026 02 18	22:09:29	a94a9fab-7349-49eb-9abc-ad1917edd428	MulterError: Unexpected field
