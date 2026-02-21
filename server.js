@@ -141,7 +141,7 @@ app.delete("/delete-pic/:initialPic", async (req, res) => {
       res.send("file deleted");
     }
   } catch (error) {
-    res.json({ message: error.message });
+    res.send(error.message);
   }
 });
 
