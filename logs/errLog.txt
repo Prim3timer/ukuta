@@ -239,3 +239,4 @@
 2026 02 12	11:21:26	3e6feee0-f218-4143-ad74-649d1a5d75eb	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 02 12	22:16:23	5d5fad65-8cac-41da-98dd-3306c4ed6b36	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
 2026 02 21	14:22:46	48c05337-40fb-4804-a018-8da388b13487	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Original Car Key Batteries (CR1616 3V)' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\Original Car Key Battery (CR1616 3V)'
+2026 02 21	20:49:23	5455de42-772b-4873-ad18-dcdfb290a61d	TypeError: Cannot set properties of null (setting 'refreshToken')
