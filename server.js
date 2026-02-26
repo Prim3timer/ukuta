@@ -49,9 +49,37 @@ const storage = multer.diskStorage({
     cb(null, file.originalname);
   },
 });
+const storage2 = multer.diskStorage({
+  destination: async (req, file, cb) => {
+    // const { name, unitMeasure, price, image, now  } = req.body
+    const { name } = req.params;
+    const files = file;
+    console.log({ files });
+    console.log({ name });
+    // console.log({fileO: req.files})
+    if (
+      !fs.existsSync(
+        path.join(__dirname, "public", "images", "groceryImages", `./${name}`),
+      )
+    ) {
+      console.log(`no ${name}`);
+      await fs.promises.mkdir(
+        path.join(__dirname, "public", "images", "groceryImages", `./${name}`),
+      );
+      // cb(null, `./public/images/groceryImages/${name}`);
+      console.log(`./${name} created`);
+    } else cb(null, `./public/images/groceryImages/${name}`);
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname);
+  },
+});
 
 const upload = multer({
   storage,
+});
+const upload2 = multer({
+  storage: storage2,
 });
 
 app.post(
@@ -90,16 +118,16 @@ app.patch("/items/pic/:name", upload.single("image"), async (req, res) => {
   const initialPic = req.query.initialPic;
   const id = req.query.id;
   const fiveArray = req.query.fiveArray;
-  // const index = req.query.index
+
   const jsonized = JSON.parse(fiveArray);
   console.log({ id, jsonized, name, initialPic });
 
   console.log("hello world");
-  // console.log(fileNames)
+
   const response = await Item.find({ _id: id });
   if (response) {
     console.log({ response });
-    //    response[0].img.splice(Number(index -1), 1, newItem)
+
     const respponse2 = await Item.findOneAndUpdate(
       { _id: id },
       {
@@ -109,12 +137,16 @@ app.patch("/items/pic/:name", upload.single("image"), async (req, res) => {
   }
   res.json({ message: "image successfully uploaded" });
 });
-app.post("/items/pic/:name", upload.single("image"), async (req, res) => {
-  console.log({ file: req.file });
-  const { name } = req.params;
+app.post(
+  "/grocery-items/pic/:name",
+  upload2.single("image"),
+  async (req, res) => {
+    console.log({ file: req.file });
+    const { name } = req.params;
 
-  res.json({ message: "image successfully uploaded" });
-});
+    res.json({ message: "image successfully uploaded" });
+  },
+);
 
 // for deleting a single image from the collage
 app.delete("/delete-pic/:initialPic", async (req, res) => {
@@ -173,7 +205,9 @@ app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/", require("./routes/root"));
 app.use("/results", require("./routes/resultRoutes"));
 app.use("/auth", require("./routes/authRoutes"));
+app.use("grocery-auth", require("./routes/groceryAuthRoutes"));
 app.use("/register", require("./routes/registerRoutes"));
+app.use("/grocery-register", require("./routes/groceryRegisterRoutes"));
 app.use("/sessions", require("./routes/sessionsRoutes"));
 app.use("/refresh", require("./routes/refreshRoutes"));
 // app.use('/create-checkout-session', require('./routes/cartRoutes'))
@@ -183,6 +217,7 @@ app.use("/items", require("./routes/itemRoutes"));
 app.use("/items", require("./routes/itemRoutes"));
 app.use("/grocery-items", require("./routes/groceryItemRoutes"));
 app.use(verifyJWT);
+app.use("/groceryUsers", require("./routes/groceryUserRoutes"));
 app.use("/users", require("./routes/userRoutes"));
 
 app.all("/*", (req, res) => {

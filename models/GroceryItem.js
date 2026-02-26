@@ -8,9 +8,9 @@ const groceryItemSchema = new Schema({
     type: String,
     // required: true
   },
-  unitMeasure: {
+  availableUnitMeasures: {
     type: Array,
-    // required: true
+    require: true,
   },
   availablePrices: {
     type: Array,
@@ -28,21 +28,10 @@ const groceryItemSchema = new Schema({
   },
   category: {
     type: String,
-    required: true,
+    // required: true,
   },
-  availableColours: {
-    type: Array,
-  },
-  availableStorage: {
-    type: Array,
-  },
-  availableFootSizes: {
-    type: Array,
-  },
-  gender: {
-    type: String,
-  },
+
   date: { type: String, required: true },
 });
 
-module.exports = mongoose.model("GroceryItem", groceryItemSchema);
+module.exports = mongoose.model("GroceryItems", groceryItemSchema);
