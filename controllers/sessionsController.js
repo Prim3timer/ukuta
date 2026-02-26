@@ -7,7 +7,6 @@ const { json } = require("express");
 const express = require("express");
 const app = express();
 // const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
-// const stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY)
 const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
 
 // Rhinohorn1#

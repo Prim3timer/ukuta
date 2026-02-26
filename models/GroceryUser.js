@@ -1,0 +1,31 @@
+const mongoose = require("mongoose");
+const { Employee } = require("../config/roles_list");
+
+const GroceryUserSchema = new mongoose.Schema({
+  username: {
+    type: String,
+    require: true,
+  },
+
+  email: {
+    type: String,
+  },
+  roles: {
+    Employee: {
+      type: Number,
+      default: 2001,
+    },
+    Manager: Number,
+    Admin: Number,
+  },
+  password: {
+    type: String,
+    require: true,
+  },
+  sessionId: {
+    type: String,
+  },
+  refreshToken: String,
+});
+
+module.exports = mongoose.model("GroceryUser", GroceryUserSchema);
