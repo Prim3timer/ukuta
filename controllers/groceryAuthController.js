@@ -11,7 +11,7 @@ const handleLogin = asyncHandler(async (req, res) => {
       .json({ message: "Username and password are required." });
 
   const foundUser = await GroceryUser.findOne({ username: user }).exec();
-  // console.log({foundUser})
+  console.log({ foundUser });
   if (!foundUser || !foundUser.active) return res.sendStatus(401);
   // evaluate password
   const match = await bcrypt.compare(pwd, foundUser.password);

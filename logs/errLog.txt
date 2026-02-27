@@ -273,3 +273,11 @@
 2026 02 22	22:42:05	eb3cf321-7c15-4b83-86a1-6b12e83432fb	Error: Cannot set headers after they are sent to the client
 2026 02 24	02:00:31	a0051936-0895-4639-a1d0-2d1a06ebc4a5	Error: Cannot set headers after they are sent to the client
 >>>>>>> dog
+2026 02 26	21:44:48	959fd2ff-72c1-424c-8dca-b62b66452531	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 26	21:44:52	6f706860-90de-4df5-985d-2170dd836c84	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 26	21:48:43	e9e088b9-c142-4d1f-b3cc-aaf76a2ee732	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 02 26	21:59:00	25ae5f2a-5049-42e7-aa50-50fd77f7729d	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 26	22:09:45	689cf25a-36be-45cf-a53e-d4f1b8636bdf	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 26	22:11:21	6e751d87-4857-4d16-9eb9-b4343f9b212b	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 26	22:14:24	f56b80b0-1fa3-46ae-b455-fe4563d68ebf	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 26	22:20:46	2d805848-3d5e-47ef-9ad5-128932a29b4c	TypeError: Cannot set properties of null (setting 'refreshToken')

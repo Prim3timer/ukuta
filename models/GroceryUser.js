@@ -22,6 +22,10 @@ const GroceryUserSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  active: {
+    type: Boolean,
+    default: true,
+  },
   sessionId: {
     type: String,
   },

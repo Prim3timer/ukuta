@@ -4,7 +4,7 @@ const groceryRefreshTokenController = require("../controllers/groceryRefreshToke
 const groceryAuthController = require("../controllers/groceryAuthController");
 const loginLimiter = require("../middleware/loginLimiter");
 
-router.route("/").post(loginLimiter, groceryAuthController.handleLogin);
+router.route("/").post(groceryAuthController.handleLogin);
 // router.route('/refresh').get(groceryRefreshTokenController.handleRefreshToken);
 router.route("/logout").get(groceryAuthController.handleLogout);
 

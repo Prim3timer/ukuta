@@ -205,7 +205,7 @@ app.use("/", express.static(path.join(__dirname, "public")));
 app.use("/", require("./routes/root"));
 app.use("/results", require("./routes/resultRoutes"));
 app.use("/auth", require("./routes/authRoutes"));
-app.use("grocery-auth", require("./routes/groceryAuthRoutes"));
+app.use("/grocery-auth", require("./routes/groceryAuthRoutes"));
 app.use("/register", require("./routes/registerRoutes"));
 app.use("/grocery-register", require("./routes/groceryRegisterRoutes"));
 app.use("/sessions", require("./routes/sessionsRoutes"));
