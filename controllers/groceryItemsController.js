@@ -31,6 +31,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     image,
     description,
     category,
+    denominator,
     qty,
   } = req.body;
   console.log({ name, availableUnitMeasures, availablePrices });
@@ -61,7 +62,9 @@ const createNewItem = asyncHandler(async (req, res) => {
     date: now,
     img: image,
     description,
+    denominator,
     category,
+    dateCreated: now,
   };
 
   // Create and store new item
@@ -82,8 +85,83 @@ const mekaSomething = asyncHandler(async (req, res) => {
   res.send(alert);
 });
 
+const updateItemTexts = asyncHandler(async (req, res) => {
+  const {
+    name,
+    availableUnitMeasures,
+    availablePrices,
+    now,
+    image,
+    description,
+    category,
+    denominator,
+    qty,
+  } = req.body;
+  console.log({ reqParams: req.params });
+});
+
+const deleteItem = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+  const name = req.query.name;
+  console.log({ name });
+
+  // Confirm data
+  if (!id) {
+    return res.status(400).json({ message: "Note ID required" });
+  }
+
+  // Confirm note exists to delete
+  const item = await GroceryItems.findById(id).exec();
+
+  if (!item) {
+    return res.status(400).json({ message: "GroceryItems not found" });
+  }
+
+  const result = await GroceryItems.deleteOne({ _id: id });
+
+  const reply = `GroceryItems '${item.name}' with ID ${item._id} deleted`;
+  if (
+    fs.existsSync(
+      path.join(
+        __dirname,
+        "..",
+        "public",
+        "images",
+        "groceryImages",
+        `./${name}`,
+      ),
+    )
+  ) {
+    const data = await fs.promises.readdir(
+      path.join(__dirname, "..", "public", "images", "groceryImages", name),
+    );
+    console.log({ content: data.length });
+    if (data.length) {
+      data.map(async (file) => {
+        await fs.promises.unlink(
+          path.join(
+            __dirname,
+            "..",
+            "public",
+            "images",
+            "groceryImages",
+            name,
+            file,
+          ),
+        );
+      });
+    }
+    await fs.promises.rmdir(
+      path.join(__dirname, "..", "public", "images", "groceryImages", name),
+    );
+  }
+  res.json(reply);
+});
+
 module.exports = {
   mekaSomething,
   getAllItems,
   createNewItem,
+  deleteItem,
+  updateItemTexts,
 };

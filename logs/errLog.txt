@@ -281,3 +281,34 @@
 2026 02 26	22:11:21	6e751d87-4857-4d16-9eb9-b4343f9b212b	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 02 26	22:14:24	f56b80b0-1fa3-46ae-b455-fe4563d68ebf	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 02 26	22:20:46	2d805848-3d5e-47ef-9ad5-128932a29b4c	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 26	23:15:57	60b38d03-2b35-44dc-b1b5-311a1fe9858c	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 27	09:29:56	f845ffa3-2e64-4504-bc4f-9c724a7b8dea	ReferenceError: transaction is not defined
+2026 02 27	10:57:43	0b9aff4f-112f-4cb1-a7ba-12a8e3523e29	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 27	10:58:42	1383fcb4-7ba4-4e48-b251-50e0ff807e98	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 28	10:06:03	3792db91-3559-4ca1-8ee7-3b2d3afa4083	Error: Cannot set headers after they are sent to the client
+2026 02 28	10:14:38	1087b5f3-6784-4f9b-815f-12c505ca5c44	Error: Cannot set headers after they are sent to the client
+2026 02 28	10:16:17	4fec04ad-39e6-4965-92d0-bbc475477d78	Error: Cannot set headers after they are sent to the client
+2026 02 28	10:17:18	b5bcc5b2-066b-411f-9bbe-15e4f495a226	Error: Cannot set headers after they are sent to the client
+2026 02 28	10:32:06	8845f217-fd22-424b-8768-4a1222e2165b	Error: Cannot set headers after they are sent to the client
+2026 02 28	10:33:57	e56001ec-66f6-4ec3-9543-b2efa3454e76	Error: Cannot set headers after they are sent to the client
+2026 02 28	12:07:37	07076e31-ba96-4ce4-abf9-79bf2001333a	Error: Cannot set headers after they are sent to the client
+2026 02 28	12:09:57	5e0c353d-3039-498c-8b9c-cb5c6ca4cbe0	Error: Cannot set headers after they are sent to the client
+2026 02 28	14:59:46	6b46abae-7353-4403-9ecd-7c1827336a4e	Error: Cannot set headers after they are sent to the client
+2026 02 28	15:02:03	22f08fe2-9302-41e4-a9de-bd82a6fc775b	Error: Cannot set headers after they are sent to the client
+2026 02 28	16:05:58	de2cfbef-c504-4260-93e2-348849c66aa2	Error: Cannot set headers after they are sent to the client
+2026 02 28	16:07:52	2c0150a3-48ee-43bd-94cc-777dc7dea192	Error: Cannot set headers after they are sent to the client
+2026 02 28	16:11:59	90841380-89db-4fb6-bb43-7fe8ae990a55	Error: Cannot set headers after they are sent to the client
+2026 02 28	21:30:23	2c955a31-e404-4afb-8376-3e21ded81c64	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 02 28	23:32:35	684c746c-90f5-4574-8b55-bdda702f9dc3	ReferenceError: Item is not defined
+2026 03 01	15:30:47	c7e3f234-62d0-4701-b0f0-09607926f931	Error: Cannot set headers after they are sent to the client
+2026 03 01	15:31:54	e168b0a2-a93c-40f4-ac9a-bbdc2cc3bdfe	Error: Cannot set headers after they are sent to the client
+2026 03 01	15:33:36	d0db17be-9ea0-4cde-834a-ddf0606b6b98	Error: Cannot set headers after they are sent to the client
+2026 03 01	15:44:24	6d19f0fe-1473-47d5-bd6a-65ecc1516a5c	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 03 01	15:47:42	5b18ca08-d6db-4a6f-aa5d-ff7612fcc926	Error: Cannot set headers after they are sent to the client
+2026 03 01	16:30:44	f17ac454-d32f-4deb-a900-dd208fb43cad	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "GroceryItems"
+2026 03 01	18:43:26	6a6f3d5c-b5f8-40e9-a07a-00e683733947	ReferenceError: cashPaid is not defined
+2026 03 01	19:40:39	99597664-7ff6-470f-9829-17da68e5cab7	Error: Cannot set headers after they are sent to the client
+2026 03 01	19:47:02	5a8fed28-f345-42af-9808-c214ac9b8454	Error: Cannot set headers after they are sent to the client
+2026 03 02	11:25:09	71a1a601-8ac6-49e9-8270-7106e1f75942	Error: Cannot set headers after they are sent to the client
+2026 03 02	11:44:44	d3f395e0-6487-42d0-8a21-a522cbdb4960	Error: Cannot set headers after they are sent to the client
+2026 03 02	11:48:10	08dc76ca-258c-4164-822b-bf3285b908d3	Error: Cannot set headers after they are sent to the client

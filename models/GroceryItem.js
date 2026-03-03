@@ -30,8 +30,17 @@ const groceryItemSchema = new Schema({
     type: String,
     // required: true,
   },
+  cashPaid: {
+    type: Number,
+  },
+
+  denominator: {
+    type: Number,
+  },
 
   date: { type: String, required: true },
+
+  dateCreated: { type: String, required: true },
 });
 
 module.exports = mongoose.model("GroceryItems", groceryItemSchema);

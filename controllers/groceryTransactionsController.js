@@ -1,38 +1,30 @@
-const GroceryTransaction = require("../models/GroceryTransacton");
+const GroceryTransaction = require("../models/GroceryTransaction");
 const GroceryItem = require("../models/GroceryItem");
 const asyncHandler = require("express-async-handler");
-const { createNewTransaction } = require("./transactionsController");
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 
 const getAllTransactions = asyncHandler(async (req, res) => {
-  const transactions = await GroceryTransaction.find();
-  if (!transactions?.length) {
-    return res.status(400).json({ message: "no transactions found" });
+  const groceryTransactions = await GroceryTransaction.find();
+  if (!groceryTransactions.length) {
+    return res.status(400).json("no transaction found");
   }
-  res.json(transactions);
+  res.json(groceryTransactions);
 });
 
 const createNewTransaction = asyncHandler(async (req, res) => {
-  var { cashier, cashierID, goods, date, status, grandTotal } = req.body;
-
-  // Confirm data
+  const { cashier, cashierID, status, goods, date, grandTotal, cashPaid } =
+    req.body;
   if (!goods) {
     return res.status(400).json({ message: "All fields are required" });
   }
 
-  // if (duplicate) {
-  //     return res.status(409).json({ message: 'Duplicate item' })
-  // }
-  // const currentDay = new Date()
-
-  // const formatedDate = format(currentDay, 'yyyy MM dd\tHH:mm:ss')
-  // date = formatedDate
   const transactionObject = {
     cashier,
     cashierID,
     goods,
     status,
     date,
+    cashPaid,
     grandTotal: grandTotal,
   };
 
@@ -47,7 +39,30 @@ const createNewTransaction = asyncHandler(async (req, res) => {
   }
 });
 
+const deleteTransaction = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+
+  // Confirm data
+  if (!id) {
+    return res.status(400).json({ message: "Note ID required" });
+  }
+
+  // Confirm note exists to delete
+  const item = await GroceryTransaction.findById(id).exec();
+
+  if (!item) {
+    return res.status(400).json({ message: "Transaction not found" });
+  }
+
+  const result = await item.deleteOne();
+
+  const reply = `Transaction '${item.name}' with ID ${item._id} deleted`;
+
+  res.json(reply);
+});
+
 module.exports = {
   getAllTransactions,
   createNewTransaction,
+  deleteTransaction,
 };

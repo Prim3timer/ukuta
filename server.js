@@ -14,6 +14,7 @@ const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const fs = require("fs");
 const Item = require("./models/Item");
+const GroceryItem = require("./models/GroceryItem");
 
 // console.log(process.env.NODE_ENV)
 
@@ -54,9 +55,6 @@ const storage2 = multer.diskStorage({
     // const { name, unitMeasure, price, image, now  } = req.body
     const { name } = req.params;
     const files = file;
-    console.log({ files });
-    console.log({ name });
-    // console.log({fileO: req.files})
     if (
       !fs.existsSync(
         path.join(__dirname, "public", "images", "groceryImages", `./${name}`),
@@ -137,6 +135,30 @@ app.patch("/items/pic/:name", upload.single("image"), async (req, res) => {
   }
   res.json({ message: "image successfully uploaded" });
 });
+
+app.patch("/grocery/pic/:name", upload2.single("image"), async (req, res) => {
+  // console.log({ file: req.file });
+  const { name } = req.params;
+  const { file } = req;
+  const id = req.query.id;
+
+  console.log({ id, name, file });
+
+  const response = await GroceryItem.find({ _id: id });
+  if (response) {
+    console.log({ response });
+
+    const response2 = await GroceryItem.findOneAndUpdate(
+      { _id: id },
+      {
+        img: file.filename,
+      },
+    );
+    if (response2) {
+      res.json({ message: "image successfully uploaded" });
+    }
+  }
+});
 app.post(
   "/grocery-items/pic/:name",
   upload2.single("image"),
@@ -183,8 +205,51 @@ app.delete("/delete-pic/:initialPic", async (req, res) => {
   }
 });
 
+app.delete("/grocery-delete-pic/:initialPic", async (req, res) => {
+  const initialPic = req.params.initialPic;
+  const name = req.query.name;
+  const id = req.query.id;
+  const item = await Item.findById(id);
+
+  console.log({ name, id, initialPic });
+
+  try {
+    console.log("hello pick");
+    await GroceryItem.findOneAndUpdate({ _id: id }, { img: "" });
+    const data = await fs.promises.readdir(
+      path.join(__dirname, "public", "images", "groceryImages", name),
+    );
+    if (
+      fs.existsSync(
+        path.join(
+          __dirname,
+          "public",
+          "images",
+          "groceryImages",
+          name,
+          initialPic,
+        ),
+      )
+    ) {
+      await fs.promises.unlink(
+        path.join(
+          __dirname,
+          "public",
+          "images",
+          "groceryImages",
+          name,
+          initialPic,
+        ),
+      );
+      res.send("file deleted");
+    }
+  } catch (error) {
+    res.send(error.message);
+  }
+});
+
 // app.get("/gendered", async (req, res) => {
-//   const response = await Item.updateMany(
+//   const response = await GroceryItem.updateMany(
 //     { gender: "men" },
 //     {
 //       $set: { gender: "gentlemen" },
@@ -213,6 +278,7 @@ app.use("/refresh", require("./routes/refreshRoutes"));
 // app.use('/create-checkout-session', require('./routes/cartRoutes'))
 
 app.use("/transactions", require("./routes/transactionRoutes"));
+app.use("/grocery-transactions", require("./routes/groceryTransactionRoutes"));
 app.use("/items", require("./routes/itemRoutes"));
 app.use("/items", require("./routes/itemRoutes"));
 app.use("/grocery-items", require("./routes/groceryItemRoutes"));
