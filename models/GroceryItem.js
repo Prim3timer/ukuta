@@ -37,6 +37,9 @@ const groceryItemSchema = new Schema({
   denominator: {
     type: Number,
   },
+  numerator: {
+    type: Number,
+  },
 
   date: { type: String, required: true },
 

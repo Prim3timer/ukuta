@@ -63,6 +63,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     img: image,
     description,
     denominator,
+    numerator: 0,
     category,
     dateCreated: now,
   };
@@ -86,18 +87,53 @@ const mekaSomething = asyncHandler(async (req, res) => {
 });
 
 const updateItemTexts = asyncHandler(async (req, res) => {
+  const { id, firstName } = req.query;
+
   const {
     name,
-    availableUnitMeasures,
-    availablePrices,
+    firstPrice,
+    secondPrice,
+    firstUnitMeasure,
+    secondUnitMeasure,
     now,
     image,
     description,
     category,
     denominator,
-    qty,
+    numerator,
+    quantity,
   } = req.body;
   console.log({ reqParams: req.params });
+  const availableUnitMeasures = [firstUnitMeasure, secondUnitMeasure];
+  const availablePrices = [firstPrice, secondPrice];
+  await GroceryItems.findOneAndUpdate(
+    { _id: id },
+    {
+      name,
+      availableUnitMeasures,
+      availablePrices,
+      date: now,
+      description,
+      category,
+      denominator,
+      dateCreated: now,
+      numerator,
+    },
+  );
+  if (firstName !== name) {
+    await fs.promises.rename(
+      path.join(
+        __dirname,
+        "..",
+        "public",
+        "images",
+        "groceryImages",
+        firstName,
+      ),
+      path.join(__dirname, "..", "public", "images", "groceryImages", name),
+    );
+  }
+  res.json(`${firstName} successfuly updated`);
 });
 
 const deleteItem = asyncHandler(async (req, res) => {

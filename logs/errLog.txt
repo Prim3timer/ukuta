@@ -312,3 +312,30 @@
 2026 03 02	11:25:09	71a1a601-8ac6-49e9-8270-7106e1f75942	Error: Cannot set headers after they are sent to the client
 2026 03 02	11:44:44	d3f395e0-6487-42d0-8a21-a522cbdb4960	Error: Cannot set headers after they are sent to the client
 2026 03 02	11:48:10	08dc76ca-258c-4164-822b-bf3285b908d3	Error: Cannot set headers after they are sent to the client
+2026 03 02	20:54:19	193e0226-246b-46b2-9fcc-551c1e274473	ReferenceError: name is not defined
+2026 03 02	20:59:46	0e140cc3-78fe-4ebd-a97c-e42c6956cdf4	ReferenceError: Cannot access 'name' before initialization
+2026 03 02	21:01:08	a153a6e8-7544-4b37-a980-cdccc2e1ee5d	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Beans' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Okpa'
+2026 03 02	21:02:15	d85e61fe-2a35-417b-8eda-6803bd8f6ab9	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Okpa' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Beans'
+2026 03 02	21:03:54	fb084eb2-7c3e-4c9e-afb1-2b9d02c76dc1	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Beans' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Rice'
+2026 03 02	21:08:42	50daa362-35d3-401a-89db-802af7613108	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Beans' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Rice'
+2026 03 02	21:09:59	acf45ce9-ae0f-47b6-96e2-41e15e5a39c3	Error: ENOENT: no such file or directory, rename 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Beans' -> 'C:\Users\18028\OneDrive\Desktop\Quick Access\Mawuhi\retailBackend\public\images\groceryImages\Rice'
+2026 03 02	21:11:09	5b9f827a-a864-4257-9111-0b8cb0f11b18	ReferenceError: currentItem is not defined
+2026 03 02	21:32:06	8bb54695-1dd5-4de8-bfb5-995269440529	Error: Cannot set headers after they are sent to the client
+2026 03 02	21:39:40	768a0aff-343d-4587-9f49-33386ed655fd	Error: Cannot set headers after they are sent to the client
+2026 03 02	21:40:45	392f47b4-5124-4908-b28e-06bd8d87efc4	Error: Cannot set headers after they are sent to the client
+2026 03 02	21:42:07	4c296e13-2e80-4d33-b0d9-a483027fc9db	Error: Cannot set headers after they are sent to the client
+2026 03 03	01:07:33	12b0e269-3246-4b6f-9696-56a95aa43a71	Error: Cannot set headers after they are sent to the client
+2026 03 03	11:33:56	852e6968-dec2-445a-9eaf-45a0a22a74b0	Error: Cannot set headers after they are sent to the client
+2026 03 03	11:48:37	741fbd61-bbd8-4460-800d-db70dcaf0d19	Error: Cannot set headers after they are sent to the client
+2026 03 03	11:49:47	451a967e-0732-4cdc-ad3b-38081d1a866e	Error: Cannot set headers after they are sent to the client
+2026 03 03	11:54:36	482bcd3f-893a-4e39-972d-4ccfc0c5d275	Error: Cannot set headers after they are sent to the client
+2026 03 03	11:55:38	735e6277-e77e-4023-8394-550e4e04dec1	Error: Cannot set headers after they are sent to the client
+2026 03 03	11:58:08	126b0f2c-a2b7-41bf-b4fc-29fd4fd82a1e	Error: Cannot set headers after they are sent to the client
+2026 03 03	12:02:45	ee7161a3-3367-4dcb-aa3e-45b99b44f62f	Error: Cannot set headers after they are sent to the client
+2026 03 03	12:04:12	07c45846-8620-4477-af35-c8c5767a3c04	Error: Cannot set headers after they are sent to the client
+2026 03 03	12:24:41	f146f4a4-1001-4cc2-9030-c49a678d429b	ReferenceError: dbItemm is not defined
+2026 03 03	23:32:21	fe732a02-720f-41a5-a869-3ac2d02672c7	Error: No such checkout.session: cs_test_b1rb2HtcVG3nJ3n1uB4cRdoAhvyU112gbVaLGpby2LZU3GVVIS7hRf3pR7
+2026 03 03	23:48:43	8cae44b8-e602-43c6-915a-e240359e2e4f	ReferenceError: good is not defined
+2026 03 04	00:15:31	76de153d-9d89-4287-861c-50840c6e99e7	ReferenceError: goodeis is not defined
+2026 03 04	00:32:24	f33ac480-6660-4bc2-8413-58ac65fec801	ReferenceError: trans is not defined
+2026 03 04	00:35:10	7c32eab6-fb8f-4394-93d0-2b650c0e208f	ReferenceError: trans is not defined

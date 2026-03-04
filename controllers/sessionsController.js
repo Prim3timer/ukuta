@@ -6,8 +6,8 @@ const { format } = require("date-fns");
 const { json } = require("express");
 const express = require("express");
 const app = express();
-// const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
-const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
+const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+// const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
 
 // Rhinohorn1#
 
@@ -100,8 +100,8 @@ const makePayment = async (req, res) => {
 
 const thanksAlert = asyncHandler(async (req, res) => {
   const { sessionId } = req.params;
-  console.log({ sessionId });
-  console.log({ requestBody: req.body.date });
+  // console.log({ sessionId });
+  // console.log({ requestBody: req.body.date });
 
   const sessions = await stripe.checkout.sessions.retrieve(sessionId, {
     expand: ["payment_intent.payment_method"],
@@ -110,10 +110,10 @@ const thanksAlert = asyncHandler(async (req, res) => {
 
   const userId = sessions2.metadata.userId;
   const currentUser = await User.findById(userId);
-  console.log({ userId });
-  console.log({ reqQuery: req.query });
+  // console.log({ userId });
+  // console.log({ reqQuery: req.query });
   const determinant = sessionId;
-  console.log({ determinant });
+  // console.log({ determinant });
   const sessionsArray = [];
   sessionsArray.push(determinant);
 
@@ -135,7 +135,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
     : "";
   const phone = customer_details.phone;
   const lineItems = await stripe.checkout.sessions.listLineItems(sessionId);
-  console.log({ lineItemsLength: await lineItems.data.length });
+  // console.log({ lineItemsLength: await lineItems.data.length });
   const stringized = JSON.stringify(lineItems);
   //   console.log({ lineItems: JSON.parse(stringized, null, 2) });
 
@@ -144,25 +144,25 @@ const thanksAlert = asyncHandler(async (req, res) => {
   //   });
   // neededProps properties are unit_amount(price), description(name), quantity, sub total
   const cartItems = await Item.find();
-  // console.log({ cartItems });
+  console.log({ cartItems });
   const neededProps = lineItems.data.map((item) => {
     const { amount_subtotal, amount_total, price, quantity, description, id } =
       item;
 
     const cartItem = currentUser.cart.find((item) => item.name === description);
 
-    console.log({ cartItem });
+    // console.log({ cartItem });
 
     const { unit_amount } = price;
     const stringized = JSON.stringify(sessions2);
     const jsonized = JSON.parse(stringized, null, 2);
-    console.log({ customer_details });
+    // console.log({ customer_details });
     const prod = cartItems.find((cartItem) => cartItem.name === description);
     const specCartProps = currentUser.cart.find(
       (cartItem) => cartItem.name === description,
     );
-    console.log({ specCartProps });
-    console.log({ metadata: sessions2.metadata });
+    // console.log({ specCartProps });
+    // console.log({ metadata: sessions2.metadata });
     // multiplying certain qty by 1000 depending on the object's unitt measure to circumvent the decimal issue with stripe quantity
     const dynamicQty =
       prod.unitMeasure === "Kilogram (kg)" ||
