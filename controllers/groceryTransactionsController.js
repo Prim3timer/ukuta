@@ -43,10 +43,33 @@ const createNewTransaction = asyncHandler(async (req, res) => {
   const inventoryUPdate = dbItems.map((item) => {
     goods.map(async (good) => {
       if (item._id == good._id) {
-        await GroceryItems.updateOne(
-          { _id: good._id },
-          { qty: item.qty - good.qty, date },
-        );
+        if (good.index == 1) {
+          await GroceryItems.updateOne(
+            { _id: good._id },
+            {
+              // qty: good.numerator < 0 ? item.qty - 1 : item.qty,
+              numerator:
+                good.numerator > 0 && good.numerator - Number(good.qty) < 0
+                  ? good.numerator - Number(good.qty) + good.denominator
+                  : good.numerator - Number(good.qty) === 0
+                    ? 0
+                    : good.denominator - (good.numerator + Number(good.qty)),
+              qty:
+                good.numerator - Number(good.qty) < 0 || good.numerator === 0
+                  ? item.qty - 1
+                  : item.qty,
+              date,
+            },
+          );
+        } else {
+          await GroceryItems.updateOne(
+            { _id: good._id },
+            {
+              qty: item.qty - Number(good.qty),
+              date,
+            },
+          );
+        }
       }
     });
   });

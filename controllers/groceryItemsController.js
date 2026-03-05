@@ -103,7 +103,7 @@ const updateItemTexts = asyncHandler(async (req, res) => {
     numerator,
     quantity,
   } = req.body;
-  console.log({ reqParams: req.params });
+  console.log({ quantity });
   const availableUnitMeasures = [firstUnitMeasure, secondUnitMeasure];
   const availablePrices = [firstPrice, secondPrice];
   await GroceryItems.findOneAndUpdate(
@@ -118,6 +118,7 @@ const updateItemTexts = asyncHandler(async (req, res) => {
       denominator,
       dateCreated: now,
       numerator,
+      qty: quantity,
     },
   );
   if (firstName !== name) {
