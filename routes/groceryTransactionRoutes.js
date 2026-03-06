@@ -8,6 +8,14 @@ router
   .get(groceryTransactionsController.getAllTransactions)
   .post(groceryTransactionsController.createNewTransaction);
 
+router
+  .route("/create-checkout-session")
+  .post(groceryTransactionsController.makePayment);
+
+router
+  .route("/sessions:/sessionId")
+  .post(groceryTransactionsController.thanksAlert);
+
 router.route("/:id").delete(groceryTransactionsController.deleteTransaction);
 
 module.exports = router;

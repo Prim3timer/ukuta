@@ -103,8 +103,45 @@ const deleteTransaction = asyncHandler(async (req, res) => {
   res.json(reply);
 });
 
+const makePayment = asyncHandler(async (req, res) => {
+  try {
+    const theGoods = req.body.goods;
+    const groceries = await GroceryItems.find();
+    console.log({ goods: theGoods, groceries });
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+
+      line_items: theGoods.map((good) => {
+        const storeItem = groceries.find((grocery) => grocery._id == good._id);
+        return {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: storeItem.name,
+            },
+            unit_amount: storeItem.availablePrices[good.index] * 100,
+          },
+          quantity: good.qty,
+        };
+      }),
+      success_url: `${process.env.CLIENT_URL}/#transactions?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.CLIENT_URL}/#sales`,
+    });
+    res.status(200).json({ session });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+const thanksAlert = asyncHandler(async () => {
+  console.log("thanks alot. got it?");
+});
+
 module.exports = {
   getAllTransactions,
   createNewTransaction,
   deleteTransaction,
+  makePayment,
+  thanksAlert,
 };
