@@ -268,18 +268,12 @@ const getSessionId = asyncHandler(async (req, res) => {
   console.log({ sessionId });
   const sessions2 = await stripe.checkout.sessions.retrieve(sessionId);
   const userId = sessions2.metadata.userId;
-  // change the session with the latest one.
+  // change the sessionId with the latest one.
   const response = await User.findOneAndUpdate({ _id: userId }, { sessionId });
   res.json(response.sessionId);
 });
-
-const checkLink = () => {
-  console.log("checking link");
-};
-
 module.exports = {
   makePayment,
   thanksAlert,
   getSessionId,
-  checkLink,
 };

@@ -53,7 +53,8 @@ const createNewItem = asyncHandler(async (req, res) => {
   if (duplicate) {
     return res.status(409).json({ message: "Duplicate item" });
   }
-
+  const numerator = 0;
+  const quantum = [qty, numerator];
   const itemObject = {
     name,
     availableUnitMeasures,
@@ -64,6 +65,7 @@ const createNewItem = asyncHandler(async (req, res) => {
     description,
     denominator,
     numerator: 0,
+    availableQuantities: quantum,
     category,
     dateCreated: now,
   };
@@ -106,6 +108,7 @@ const updateItemTexts = asyncHandler(async (req, res) => {
   console.log({ quantity });
   const availableUnitMeasures = [firstUnitMeasure, secondUnitMeasure];
   const availablePrices = [firstPrice, secondPrice];
+  const availableQuantities = [quantity, Number(numerator)];
   await GroceryItems.findOneAndUpdate(
     { _id: id },
     {
@@ -116,6 +119,7 @@ const updateItemTexts = asyncHandler(async (req, res) => {
       description,
       category,
       denominator,
+      availableQuantities,
       dateCreated: now,
       numerator,
       qty: quantity,

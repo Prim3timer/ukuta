@@ -49,15 +49,14 @@ const createNewTransaction = asyncHandler(async (req, res) => {
             {
               // qty: good.numerator < 0 ? item.qty - 1 : item.qty,
               numerator:
-                good.numerator > 0 && good.numerator - Number(good.qty) < 0
+                good.numerator - Number(good.qty) < 0
                   ? good.numerator - Number(good.qty) + good.denominator
-                  : good.numerator - Number(good.qty) === 0
-                    ? 0
-                    : good.denominator - (good.numerator + Number(good.qty)),
+                  : good.numerator - Number(good.qty),
               qty:
                 good.numerator - Number(good.qty) < 0 || good.numerator === 0
                   ? item.qty - 1
                   : item.qty,
+              // availableQuantities: { ...good, qty, navigator },
               date,
             },
           );
@@ -70,6 +69,14 @@ const createNewTransaction = asyncHandler(async (req, res) => {
             },
           );
         }
+        const currentItem = await GroceryItems.findById({
+          _id: good._id,
+        });
+        const availableQuantities = [currentItem.qty, currentItem.numerator];
+        await GroceryItems.updateOne(
+          { _id: good._id },
+          { availableQuantities },
+        );
       }
     });
   });
@@ -107,7 +114,6 @@ const makePayment = asyncHandler(async (req, res) => {
   try {
     const theGoods = req.body.goods;
     const groceries = await GroceryItems.find();
-    console.log({ goods: theGoods, groceries });
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
       mode: "payment",
@@ -134,8 +140,10 @@ const makePayment = asyncHandler(async (req, res) => {
   }
 });
 
-const thanksAlert = asyncHandler(async () => {
-  console.log("thanks alot. got it?");
+const thanksAlert = asyncHandler(async (req, res) => {
+  res.send("stella");
+  // const { sessionId } = req.params;
+  // console.log({ sessionId });
 });
 
 module.exports = {

@@ -13,7 +13,7 @@ router
   .post(groceryTransactionsController.makePayment);
 
 router
-  .route("/sessions:/sessionId")
+  .route("/thanks/:sessionId")
   .post(groceryTransactionsController.thanksAlert);
 
 router.route("/:id").delete(groceryTransactionsController.deleteTransaction);

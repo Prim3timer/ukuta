@@ -40,6 +40,9 @@ const groceryItemSchema = new Schema({
   numerator: {
     type: Number,
   },
+  availableQuantities: {
+    type: Array,
+  },
 
   date: { type: String, required: true },
 
