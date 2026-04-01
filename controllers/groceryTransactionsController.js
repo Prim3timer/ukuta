@@ -237,8 +237,8 @@ const makePayment = asyncHandler(async (req, res) => {
           },
         };
       }),
-      success_url: `${process.env.CLIENT_URL}/grocery/#transactions?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.CLIENT_URL}/#sales`,
+      success_url: `${process.env.SECOND_CLIENT_URL}/grocery/#transactions?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.SECOND_CLIENT_URL}/#sales`,
 
       metadata: {
         userId: req.body.cashierID,
