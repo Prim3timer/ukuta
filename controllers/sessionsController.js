@@ -136,7 +136,6 @@ const thanksAlert = asyncHandler(async (req, res) => {
   const phone = customer_details.phone;
   const lineItems = await stripe.checkout.sessions.listLineItems(sessionId);
   // console.log({ lineItemsLength: await lineItems.data.length });
-  const stringized = JSON.stringify(lineItems);
   //   console.log({ lineItems: JSON.parse(stringized, null, 2) });
 
   //   console.log({

@@ -16,6 +16,10 @@ router
   .route("/thanks/:sessionId")
   .post(groceryTransactionsController.thanksAlert);
 
+router
+  .route(`/old-session/:sessionId`)
+  .get(groceryTransactionsController.getSessionId);
+
 router.route("/:id").delete(groceryTransactionsController.deleteTransaction);
 
 module.exports = router;

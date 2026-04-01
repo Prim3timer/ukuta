@@ -114,3 +114,9 @@
 2026 03 18	21:11:57	c488749e-38a8-4865-9173-0f47fd25a63f	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
 2026 03 18	21:12:59	47b6d4b4-7875-41a1-8e1e-6baf8abe5581	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
 2026 03 18	23:51:47	671e042f-ed4c-4ff4-98dc-7f6e326ab483	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2026 03 24	13:16:22	020d6c5d-b9d0-4910-acec-2debc41b0042	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2026 03 25	15:43:17	5c8079ba-ca81-40c0-84ab-ceacdca80cc6	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2026 03 25	18:44:28	804f77e4-14b8-4a59-a129-2bb28a9643fc	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2026 03 25	18:45:21	149369ed-f671-48f6-9843-b8285a5c5eaa	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2026 03 27	15:50:22	5cdff3e5-4c65-44dc-b5f7-60d630acc8bc	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2026 03 30	18:47:08	7c60d829-b38a-4476-9261-f132a71cdde7	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net

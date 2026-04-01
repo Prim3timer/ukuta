@@ -35,6 +35,9 @@ const groceryTransactionSchema = Schema({
   cashPaid: {
     type: String,
   },
+  lastFour: {
+    type: String,
+  },
   date: { type: String, required: true },
   name: {
     type: String,

@@ -358,3 +358,117 @@
 2026 03 09	11:03:16	5672eca5-48c2-41c6-ada3-f3886c4afa26	Error: Cannot set headers after they are sent to the client
 2026 03 14	05:11:01	f40e4c0e-2f88-4d5d-aedb-ca638c7f9ca0	Error: Cannot set headers after they are sent to the client
 2026 03 23	15:44:09	06e89964-9b5b-4f45-a638-1880e316affd	Error: Cannot set headers after they are sent to the client
+2026 03 23	16:21:11	0ebb26df-2936-4354-8c34-11829a559466	TypeError: Cannot read properties of null (reading 'sessionId')
+2026 03 23	16:27:07	7fd90db0-cb93-469d-8fec-891459e92aaf	TypeError: Cannot read properties of null (reading 'sessionId')
+2026 03 24	13:20:07	27cbea9c-3dcf-4dd5-8db7-a90646353cd7	Error: read ECONNRESET
+2026 03 24	13:20:11	ef7da6fc-fe86-4f8e-b0dc-bc91bacf27c6	Error: read ECONNRESET
+2026 03 24	13:20:43	42320f49-bd67-4872-994e-6799851cf926	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 03 24	20:10:04	3d15c707-bfdd-436b-98ec-78e3eeca4be3	TypeError: Cannot read properties of null (reading 'sessionId')
+2026 03 28	08:37:43	237c5972-1bf4-43ce-9e7b-b0f7a8d2b3a9	TypeError: Cannot read properties of null (reading 'sessionId')
+2026 03 29	12:05:17	ebead2df-81a0-4288-afb6-c391ca5b75c2	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 03 29	12:32:06	5d974f05-ca13-4305-ac18-8ff8e47c7e89	ReferenceError: User is not defined
+2026 03 29	12:33:27	dbb925bd-569e-47e8-bbff-a44498252c0a	ReferenceError: GroceryUser is not defined
+2026 03 29	12:34:32	8d33d42f-ab06-4f01-95aa-7a910cf3f75f	TypeError: Cannot read properties of null (reading 'sessionId')
+2026 03 29	12:41:14	e7bdd990-9bcc-4d77-a141-d2c03595e956	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	5bde964e-6406-41d2-91e8-16564afb4b12	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	46d68409-cd5e-46e5-ab4b-607bc81fc1ba	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	252e7ea6-807b-4895-abb5-290688b4ff99	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	494162a8-b102-4457-8fb4-9a2615516067	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	e4e3c40b-6eeb-4645-a0b0-f99ae3c82090	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	70ba3176-3086-4a6b-ad7b-d5923e900215	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	b832ca15-c45f-493a-8e55-8f64c83dbe84	Error: No such checkout.session: undefined
+2026 03 29	12:41:14	5382441f-8659-4f2d-beff-b23f4d643e77	Error: No such checkout.session: undefined
+2026 03 29	12:41:15	d5645dee-a2c5-44ff-8abb-bfbcf175776f	Error: No such checkout.session: undefined
+2026 03 29	12:41:15	4c11dfc2-c1d1-48c5-9f2a-51aa5a10cdc0	Error: No such checkout.session: undefined
+2026 03 29	12:41:15	08a13658-dcf6-43ad-a540-905d04c85141	Error: No such checkout.session: undefined
+2026 03 29	12:41:15	f9e8eeb0-a8b2-41dc-997d-bd0bc464fb96	Error: No such checkout.session: undefined
+2026 03 29	12:41:15	17e5256d-2ef8-4c98-b7f2-0ab5246f839a	Error: No such checkout.session: undefined
+2026 03 29	12:41:15	9fb029e2-86f0-4075-b688-2fe3e5ece3e6	Error: No such checkout.session: undefined
+2026 03 29	12:41:15	8fffae6a-c3e7-455e-a191-51467f45d2c3	Error: No such checkout.session: undefined
+2026 03 29	12:41:16	0503fda7-93a8-427c-9e59-5982783d33d1	Error: No such checkout.session: undefined
+2026 03 29	12:41:16	5e5c6a95-892a-4a17-a7d3-d23b21dd2e8d	Error: No such checkout.session: undefined
+2026 03 29	12:41:16	19f29242-4f1f-45e6-b4a0-0f4cda2a81ab	Error: No such checkout.session: undefined
+2026 03 29	12:41:16	33cc7c0a-e521-46b5-a0e0-afe9b911a073	Error: No such checkout.session: undefined
+2026 03 29	12:41:16	f2a5e532-1e08-422d-a5b6-1cec9155008f	Error: No such checkout.session: undefined
+2026 03 29	12:41:17	b26b9099-27b7-496e-a6b4-6899f8eb7b33	Error: No such checkout.session: undefined
+2026 03 29	12:41:17	2a2f2440-89f6-490a-a5fc-9ed5f4647b69	Error: No such checkout.session: undefined
+2026 03 29	12:41:17	28b70f37-2ab1-4980-9b3a-895b35ab8710	Error: No such checkout.session: undefined
+2026 03 29	12:41:17	2c61d19c-6c3d-4e3b-9a0e-e4b3e7a92c64	Error: No such checkout.session: undefined
+2026 03 29	12:41:17	b32eff7c-fbb1-4f89-ba1b-b4ebdce5edf3	Error: No such checkout.session: undefined
+2026 03 29	12:41:18	5777fd16-38f3-4876-a520-eb14d7eb8728	Error: No such checkout.session: undefined
+2026 03 29	12:41:18	fa60c13d-4671-48e1-87ab-3363fdd27e86	Error: No such checkout.session: undefined
+2026 03 29	12:41:18	26cdd633-2297-4bb8-aba9-a01c9f4f6e50	Error: No such checkout.session: undefined
+2026 03 29	12:41:24	cacb8096-35a1-4b7b-a101-16ee3f51051c	Error: No such checkout.session: undefined
+2026 03 29	12:41:24	b1341597-509a-4943-976c-62efc97bbed3	Error: No such checkout.session: undefined
+2026 03 29	12:41:25	e8a123d6-1514-4ef1-9c2e-f374b2bd260a	Error: No such checkout.session: undefined
+2026 03 29	12:41:25	a88ad3b4-2a12-4f7f-936d-e87fce1c6e39	Error: No such checkout.session: undefined
+2026 03 29	12:41:26	039fc95e-83f1-4ad8-8868-a581c31b7553	Error: No such checkout.session: undefined
+2026 03 29	12:41:27	c4d5c15d-cd83-4711-bc71-2174f3ac4b38	Error: No such checkout.session: undefined
+2026 03 29	12:41:27	0f698b81-765f-4323-914e-102b12354b71	Error: No such checkout.session: undefined
+2026 03 29	12:41:28	6365e5c6-77e5-4642-b35b-4566d45cf3d5	Error: No such checkout.session: undefined
+2026 03 29	12:41:29	311f68ec-eef3-4822-b815-36e7bfedeecf	Error: No such checkout.session: undefined
+2026 03 29	12:41:29	52f1a98c-47ae-43b0-ac0f-5cee2e8c4013	Error: No such checkout.session: undefined
+2026 03 29	12:41:30	3867c6dd-7911-4709-b175-173fe025231f	Error: No such checkout.session: undefined
+2026 03 29	12:41:30	08b227bf-94a0-435a-8f19-c9a3c4091532	Error: No such checkout.session: undefined
+2026 03 29	12:41:32	e61dbf22-1815-417d-84bb-ed5534d06829	Error: No such checkout.session: undefined
+2026 03 29	12:41:33	582321d0-a23a-4bc4-81db-708d2401584c	Error: No such checkout.session: undefined
+2026 03 29	12:41:33	4e8f4d1a-acb0-4e55-9538-719fd200a855	Error: No such checkout.session: undefined
+2026 03 29	12:41:34	d08139de-9ac0-49a6-bd81-d877709b906e	Error: No such checkout.session: undefined
+2026 03 29	12:41:35	f1f43db5-5d7f-4542-9f4b-0cd0f682cf94	Error: No such checkout.session: undefined
+2026 03 29	12:41:36	786c8dbf-2470-49a9-b23c-a5bcb417f7c2	Error: No such checkout.session: undefined
+2026 03 29	12:41:39	f40f281c-5f3c-4bfd-9cd4-6bd54ccb4006	Error: No such checkout.session: undefined
+2026 03 29	12:41:42	ddd5b142-2b4c-4f90-bde2-8fcdeb4f76eb	Error: No such checkout.session: undefined
+2026 03 29	12:41:44	5a70daa0-50e2-4b7a-8e28-c24d71c8f685	Error: No such checkout.session: undefined
+2026 03 29	12:41:48	d97aa5ca-7bf2-4859-b927-2963a0550404	Error: No such checkout.session: undefined
+2026 03 29	12:41:53	d37f9c1b-153b-48b3-87e8-a281c51af777	Error: No such checkout.session: undefined
+2026 03 29	12:41:55	7fee5cf6-d7db-4a65-b65a-506da893cde0	Error: No such checkout.session: undefined
+2026 03 29	12:41:56	af7db02e-3fb2-4336-a4de-19535ce6fe79	Error: No such checkout.session: undefined
+2026 03 29	12:41:58	fdb96a8d-e195-41e4-be13-2266e09858c5	Error: No such checkout.session: undefined
+2026 03 29	12:42:01	09e52be7-0d36-43a6-ad35-d276ff40dace	Error: No such checkout.session: undefined
+2026 03 29	12:42:03	968f0794-625e-4f41-9338-8a300e9e6d44	Error: No such checkout.session: undefined
+2026 03 29	12:42:04	367edcb3-d099-40bf-bbe8-925917c2cfe7	Error: No such checkout.session: undefined
+2026 03 29	12:42:06	801c6f18-dfdf-40d4-98a3-76e46a60898a	Error: No such checkout.session: undefined
+2026 03 29	12:42:09	9db78ac7-033e-46c8-8214-0182ab051c6b	Error: No such checkout.session: undefined
+2026 03 29	12:42:09	65136451-7683-42fe-b12d-a50b6fe43a27	Error: No such checkout.session: undefined
+2026 03 29	12:42:12	60b4c647-db4e-455e-beb1-a7e8564145d9	Error: No such checkout.session: undefined
+2026 03 29	12:42:17	38a22395-a4ac-49eb-a527-cedf067f9fe3	Error: No such checkout.session: undefined
+2026 03 29	12:42:23	a555d26a-4b01-4a0b-b7f4-afd413a665b0	Error: No such checkout.session: undefined
+2026 03 29	12:43:02	2cdedcec-47c3-4c8d-b4bb-cd1e1b234c75	Error: No such checkout.session: undefined
+2026 03 29	12:43:03	d626a237-9da1-4aed-aa87-8e847d4437e5	Error: No such checkout.session: undefined
+2026 03 29	12:43:15	6fba158c-48a3-4ea8-99e5-62b0a27ec9df	Error: No such checkout.session: undefined
+2026 03 29	12:43:19	67b72fd8-312e-4448-a9f3-a104f5c5efa7	Error: No such checkout.session: undefined
+2026 03 29	12:43:35	a3f59d17-0bca-4f1b-8837-25da448421fa	Error: No such checkout.session: undefined
+2026 03 29	12:45:02	0531cea2-609b-43e7-a58b-78b70e723a44	Error: No such checkout.session: undefined
+2026 03 29	12:52:02	3c381355-d875-485b-8ec5-9b533aca563f	Error: No such checkout.session: undefined
+2026 03 29	12:52:06	531a5cdf-2856-48db-93de-f05dbc1c20a4	Error: No such checkout.session: undefined
+2026 03 29	12:52:19	c794f05f-fe5e-40a2-b85e-9a5990da3332	Error: No such checkout.session: undefined
+2026 03 29	13:06:08	19340aa6-835b-4b1d-9568-4cf1384ab7f1	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 03 29	13:06:16	3545e11a-f7ee-45c9-876b-8a6b3a090f39	Error: No such checkout.session: undefined
+2026 03 29	13:06:18	7f58e8b5-0e75-46d4-bb1b-10c9f209a8a1	Error: No such checkout.session: undefined
+2026 03 29	13:07:23	8b4e299e-c8e9-4f05-a467-4a7a1857a526	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 03 29	13:07:30	d842f42a-0fa3-4d6b-98ff-9ca50ae98950	Error: No such checkout.session: undefined
+2026 03 29	13:07:31	12a1129c-379a-4fcd-967b-051d120605ef	Error: No such checkout.session: undefined
+2026 03 29	13:10:35	b2452be4-8188-400c-b65c-00ec5ce7af83	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 03 29	13:10:42	0afd32de-05a9-46ef-965e-e6a2a123e710	Error: No such checkout.session: undefined
+2026 03 29	13:10:44	77e8153f-755e-4a9f-8217-c6a6e472b3f1	Error: No such checkout.session: undefined
+2026 03 29	13:14:28	2ad21011-4294-413b-b32e-21b17f6571be	Error: No such checkout.session: undefined
+2026 03 29	13:17:20	a895dfd8-f3d7-4e90-854a-9fcaefd5ea31	Error: No such checkout.session: undefined
+2026 03 29	13:17:26	ffa15b0b-b42d-4d81-833d-36d2d2bc14c4	Error: No such checkout.session: undefined
+2026 03 29	13:22:20	ddf57e74-0664-42ec-a05d-b3e09a3d9e40	Error: No such checkout.session: undefined
+2026 03 29	13:22:21	3073023a-f61a-4140-b800-b4ff6ee24470	Error: No such checkout.session: undefined
+2026 03 29	13:32:05	b220b9ca-0aa7-4236-8758-1eaa306b65fb	Error: No such checkout.session: undefined
+2026 03 29	14:06:49	130889c9-3f52-49d0-96b8-32c4dda17c6f	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 03 29	14:24:51	6cc261d2-0994-4da2-b4a5-6be26205c5ae	TypeError: lineItems.map is not a function
+2026 03 29	14:26:01	b8e353a1-a130-46b5-8f47-d1c9f084a2b5	ReferenceError: item is not defined
+2026 03 30	09:20:45	08390d6f-7597-4c16-899a-eee41894ae67	ReferenceError: item is not defined
+2026 03 30	09:29:22	6bf34903-d52c-4bf5-856b-11b08802b5f2	ReferenceError: metadata is not defined
+2026 03 30	14:59:48	6796ea0f-05a2-4c12-8954-d26e67c02b06	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 03 30	14:59:51	0dd36b12-9c63-4cae-a251-5d8c3ba6eae4	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 03 30	15:00:08	ec5a52aa-4d63-4736-831f-cfa4fe1d7e05	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 03 30	23:39:26	f099e287-f7b1-4a65-8c40-222e98578303	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 04 01	10:08:10	26f56e1f-fb11-491a-bafc-2b029af29d1b	ReferenceError: receiptArray is not defined
+2026 04 01	11:10:00	c254083f-9d24-4de3-8e0c-14b814a18207	ReferenceError: currentUser is not defined
+2026 04 01	11:16:26	6e81c658-1691-44df-bc29-30b44ca79882	ReferenceError: User is not defined
+2026 04 01	11:20:55	e1f014c1-4bb4-4246-9766-56a71d76a070	ReferenceError: User is not defined
+2026 04 01	11:23:26	b5da15b2-e938-47da-a7a2-ae73e647242b	ReferenceError: User is not defined
+2026 04 01	11:44:37	7326cc32-048a-43b7-8c5e-0419e3edc612	ValidationError: GroceryTransaction validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal"

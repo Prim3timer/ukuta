@@ -1,7 +1,9 @@
 const GroceryTransaction = require("../models/GroceryTransaction");
 const GroceryItems = require("../models/GroceryItem");
+const GroceryUser = require("../models/GroceryUser");
 const asyncHandler = require("express-async-handler");
 const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
+// const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
 
 const getAllTransactions = asyncHandler(async (req, res) => {
   const groceryTransactions = await GroceryTransaction.find();
@@ -27,12 +29,10 @@ const createNewTransaction = asyncHandler(async (req, res) => {
     cashPaid,
     grandTotal: grandTotal,
   };
-  console.log({ goods });
   const dbItems = await GroceryItems.find().exec();
   const newDb = dbItems.map((item) => {
     return item._id;
   });
-  console.log({ newDb });
   // Create and store new item
   const transaction = await GroceryTransaction.create(transactionObject);
   // const trans = dbItems.filter((item) => {
@@ -56,7 +56,7 @@ const createNewTransaction = asyncHandler(async (req, res) => {
                 good.numerator - Number(good.qty) < 0 || good.numerator === 0
                   ? item.qty - 1
                   : item.qty,
-              // availableQuantities: { ...good, qty, navigator },
+
               date,
             },
           );
@@ -88,6 +88,107 @@ const createNewTransaction = asyncHandler(async (req, res) => {
   }
 });
 
+const thanksAlert = asyncHandler(async (req, res) => {
+  const { sessionId } = req.params;
+  console.log({ sessionId });
+
+  const sessions = await stripe.checkout.sessions.retrieve(sessionId, {
+    expand: ["payment_intent.payment_method"],
+  });
+  const sessions2 = await stripe.checkout.sessions.retrieve(sessionId);
+
+  const userId = sessions2.metadata.userId;
+  const currentUser = await GroceryUser.findById(userId);
+  const lineItems = await stripe.checkout.sessions.listLineItems(sessionId);
+
+  const storeItems = await GroceryItems.find();
+
+  if (lineItems) {
+    const braxTax = storeItems.map(async (storeItem) => {
+      lineItems.data.map(async (lineItem) => {
+        const { index, id } = lineItem.metadata;
+        if (storeItem._id == id) {
+          const storeItem = storeItems.find((storeItem) => storeItem._id == id);
+          const firstElement = storeItem.availableQuantities[0];
+          const secondElement = storeItem.availableQuantities[1];
+          const diff = secondElement - lineItem.quantity;
+          console.log({ secondElement, lineQty: lineItem.quantity });
+          // storeItem.availableQuantities.splice(index, 1, diff);
+          if (index == 1) {
+            await GroceryItems.updateOne(
+              { _id: id },
+              {
+                numerator:
+                  storeItem.numerator - Number(lineItem.quantity) < 0
+                    ? storeItem.numerator -
+                      Number(lineItem.quantity) +
+                      storeItem.denominator
+                    : storeItem.numerator - Number(lineItem.quantity),
+
+                qty:
+                  storeItem.numerator - Number(lineItem.quantity) < 0
+                    ? storeItem.qty - 1
+                    : storeItem.qty,
+              },
+            );
+          } else {
+            await GroceryItems.updateOne(
+              { _id: id },
+              {
+                qty: storeItem.qty - Number(lineItem.quantity),
+                // date,
+              },
+            );
+          }
+          const currentItem = await GroceryItems.findById({
+            _id: id,
+          });
+          const availableQuantities = [currentItem.qty, currentItem.numerator];
+          await GroceryItems.updateOne({ _id: id }, { availableQuantities });
+          console.log({ lineItemQty: lineItem.quantity });
+        }
+      });
+    });
+  }
+
+  const receiptArray = lineItems.data.map((lineItem) => {
+    const { unit_amount } = lineItem.price;
+    const { index, id } = lineItem.metadata;
+    const { amount_subtotal, description, quantity } = lineItem;
+    const currentItem = storeItems.find((storeItem) => storeItem._id == id);
+    // return lineItem;
+
+    return {
+      price: unit_amount / 100,
+      total: amount_subtotal / 100,
+      name: description,
+      qty: quantity,
+      index,
+      id,
+      unitMeasure: currentItem.availableUnitMeasures[index],
+    };
+  });
+
+  const grandT = receiptArray.reduce((accummulator, total) => {
+    return accummulator + total.total;
+  }, 0);
+
+  console.log({ receiptArray });
+
+  const transactionObject = {
+    cashier: currentUser.username,
+    cashierID: currentUser._id,
+    goods: receiptArray,
+    date: req.body.date,
+    grandTotal: grandT,
+    last4: sessions.payment_intent.payment_method.card.last,
+    date: req.body.date,
+  };
+  const transaction = await GroceryTransaction.create(transactionObject);
+
+  res.send(sessionId);
+});
+
 const deleteTransaction = asyncHandler(async (req, res) => {
   const { id } = req.params;
 
@@ -113,6 +214,7 @@ const deleteTransaction = asyncHandler(async (req, res) => {
 const makePayment = asyncHandler(async (req, res) => {
   try {
     const theGoods = req.body.goods;
+    console.log({ goods: req.body.goods });
     const groceries = await GroceryItems.find();
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -129,10 +231,18 @@ const makePayment = asyncHandler(async (req, res) => {
             unit_amount: storeItem.availablePrices[good.index] * 100,
           },
           quantity: good.qty,
+          metadata: {
+            id: good._id,
+            index: good.index,
+          },
         };
       }),
-      success_url: `${process.env.CLIENT_URL}/#transactions?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${process.env.CLIENT_URL}/grocery/#transactions?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${process.env.CLIENT_URL}/#sales`,
+
+      metadata: {
+        userId: req.body.cashierID,
+      },
     });
     res.status(200).json({ session });
   } catch (error) {
@@ -140,10 +250,17 @@ const makePayment = asyncHandler(async (req, res) => {
   }
 });
 
-const thanksAlert = asyncHandler(async (req, res) => {
-  res.send("stella");
-  // const { sessionId } = req.params;
-  // console.log({ sessionId });
+// for making sure a transaction is not dublicated as it results in double intventory update.
+const getSessionId = asyncHandler(async (req, res) => {
+  const { sessionId } = req.params;
+  const sessions2 = await stripe.checkout.sessions.retrieve(sessionId);
+  const userId = sessions2.metadata.userId;
+  // change the sessionId with the latest one.
+  const response = await GroceryUser.findOneAndUpdate(
+    { _id: userId },
+    { sessionId },
+  );
+  res.json(response.sessionId);
 });
 
 module.exports = {
@@ -152,4 +269,5 @@ module.exports = {
   deleteTransaction,
   makePayment,
   thanksAlert,
+  getSessionId,
 };
