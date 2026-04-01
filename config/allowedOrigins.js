@@ -1,11 +1,12 @@
 const allowedOrigins = [
-    'http://localhost:3000',
-    'http://localhost:3001',
-    'http://127.0.0.1:5500',
-    'https://retail-solutions.onrender.com',
-    // 'https://prim3timer.github.io/Retailer',
-    'https://prim3timer.github.io',
-    'https://checkout.stripe.com',
-]
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "http://127.0.0.1:5500",
+  "https://retail-solutions.onrender.com",
+  // 'https://prim3timer.github.io/Retailer',
+  "https://prim3timer.github.io",
+  "https://checkout.stripe.com",
+  "https://retaildaily.onrender.com",
+];
 
-module.exports = allowedOrigins
+module.exports = allowedOrigins;
