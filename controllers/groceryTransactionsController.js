@@ -88,6 +88,67 @@ const createNewTransaction = asyncHandler(async (req, res) => {
   }
 });
 
+const deleteTransaction = asyncHandler(async (req, res) => {
+  const { id } = req.params;
+
+  // Confirm data
+  if (!id) {
+    return res.status(400).json({ message: "Note ID required" });
+  }
+
+  // Confirm note exists to delete
+  const item = await GroceryTransaction.findById(id).exec();
+
+  if (!item) {
+    return res.status(400).json({ message: "Transaction not found" });
+  }
+
+  const result = await item.deleteOne();
+
+  const reply = `Transaction '${item.name}' with ID ${item._id} deleted`;
+
+  res.json(reply);
+});
+
+const makePayment = asyncHandler(async (req, res) => {
+  try {
+    const theGoods = req.body.goods;
+    console.log({ goods: req.body.goods });
+    const groceries = await GroceryItems.find();
+    const session = await stripe.checkout.sessions.create({
+      payment_method_types: ["card"],
+      mode: "payment",
+
+      line_items: theGoods.map((good) => {
+        const storeItem = groceries.find((grocery) => grocery._id == good._id);
+        return {
+          price_data: {
+            currency: "usd",
+            product_data: {
+              name: storeItem.name,
+            },
+            unit_amount: storeItem.availablePrices[good.index] * 100,
+          },
+          quantity: good.qty,
+          metadata: {
+            id: good._id,
+            index: good.index,
+          },
+        };
+      }),
+      success_url: `${process.env.SECOND_CLIENT_URL}/#transactions?session_id={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${process.env.SECOND_CLIENT_URL}/#sales`,
+
+      metadata: {
+        userId: req.body.cashierID,
+      },
+    });
+    res.status(200).json({ session });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
 const thanksAlert = asyncHandler(async (req, res) => {
   const { sessionId } = req.params;
   console.log({ sessionId });
@@ -187,67 +248,6 @@ const thanksAlert = asyncHandler(async (req, res) => {
   const transaction = await GroceryTransaction.create(transactionObject);
 
   res.send(sessionId);
-});
-
-const deleteTransaction = asyncHandler(async (req, res) => {
-  const { id } = req.params;
-
-  // Confirm data
-  if (!id) {
-    return res.status(400).json({ message: "Note ID required" });
-  }
-
-  // Confirm note exists to delete
-  const item = await GroceryTransaction.findById(id).exec();
-
-  if (!item) {
-    return res.status(400).json({ message: "Transaction not found" });
-  }
-
-  const result = await item.deleteOne();
-
-  const reply = `Transaction '${item.name}' with ID ${item._id} deleted`;
-
-  res.json(reply);
-});
-
-const makePayment = asyncHandler(async (req, res) => {
-  try {
-    const theGoods = req.body.goods;
-    console.log({ goods: req.body.goods });
-    const groceries = await GroceryItems.find();
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ["card"],
-      mode: "payment",
-
-      line_items: theGoods.map((good) => {
-        const storeItem = groceries.find((grocery) => grocery._id == good._id);
-        return {
-          price_data: {
-            currency: "usd",
-            product_data: {
-              name: storeItem.name,
-            },
-            unit_amount: storeItem.availablePrices[good.index] * 100,
-          },
-          quantity: good.qty,
-          metadata: {
-            id: good._id,
-            index: good.index,
-          },
-        };
-      }),
-      success_url: `${process.env.SECOND_CLIENT_URL}/#transactions?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${process.env.SECOND_CLIENT_URL}/#sales`,
-
-      metadata: {
-        userId: req.body.cashierID,
-      },
-    });
-    res.status(200).json({ session });
-  } catch (error) {
-    res.status(500).json({ message: error.message });
-  }
 });
 
 // for making sure a transaction is not dublicated as it results in double intventory update.
