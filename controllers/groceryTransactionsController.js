@@ -260,7 +260,9 @@ const getSessionId = asyncHandler(async (req, res) => {
     { _id: userId },
     { sessionId },
   );
-  res.json(response.sessionId);
+  if (response) {
+    res.send(response.sessionId);
+  }
 });
 
 module.exports = {
