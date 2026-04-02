@@ -261,6 +261,7 @@ const getSessionId = asyncHandler(async (req, res) => {
     { sessionId },
   );
   if (response) {
+    console.log({ response });
     res.send(response.sessionId);
   }
 });
