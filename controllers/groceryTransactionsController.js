@@ -242,7 +242,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
     goods: receiptArray,
     date: req.body.date,
     grandTotal: grandT,
-    last4: sessions.payment_intent.payment_method.card.last,
+    last4: sessions.payment_intent.payment_method.card.last4,
     date: req.body.date,
   };
   const transaction = await GroceryTransaction.create(transactionObject);

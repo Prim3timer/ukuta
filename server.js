@@ -275,6 +275,7 @@ app.use("/register", require("./routes/registerRoutes"));
 app.use("/grocery-register", require("./routes/groceryRegisterRoutes"));
 app.use("/sessions", require("./routes/sessionsRoutes"));
 app.use("/refresh", require("./routes/refreshRoutes"));
+app.use("grocery-refresh", require("./routes/groceryRefreshRoutes"));
 // app.use('/create-checkout-session', require('./routes/cartRoutes'))
 
 app.use("/transactions", require("./routes/transactionRoutes"));
@@ -282,8 +283,8 @@ app.use("/grocery-transactions", require("./routes/groceryTransactionRoutes"));
 app.use("/items", require("./routes/itemRoutes"));
 app.use("/items", require("./routes/itemRoutes"));
 app.use("/grocery-items", require("./routes/groceryItemRoutes"));
-app.use(verifyJWT);
 app.use("/groceryUsers", require("./routes/groceryUserRoutes"));
+app.use(verifyJWT);
 app.use("/users", require("./routes/userRoutes"));
 
 app.all("/*", (req, res) => {

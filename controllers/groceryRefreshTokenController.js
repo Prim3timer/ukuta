@@ -13,8 +13,9 @@ const handleRefreshToken = asyncHandler(async (req, res) => {
   // find by refresh token
   console.log({ refreshToken });
   const foundUser = await GroceryUser.findOne({ refreshToken }).exec();
-  console.log({ foundUser });
+  console.log({ foundUserGro: foundUser });
   const users = await GroceryUser.find().exec();
+  console.log({ users });
   if (!foundUser) return res.sendStatus(403); //Forbidden
   // we will use the jwt dependency to verify the refresh token
   jwt.verify(

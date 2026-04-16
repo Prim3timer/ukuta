@@ -472,3 +472,9 @@
 2026 04 01	11:20:55	e1f014c1-4bb4-4246-9766-56a71d76a070	ReferenceError: User is not defined
 2026 04 01	11:23:26	b5da15b2-e938-47da-a7a2-ae73e647242b	ReferenceError: User is not defined
 2026 04 01	11:44:37	7326cc32-048a-43b7-8c5e-0419e3edc612	ValidationError: GroceryTransaction validation failed: grandTotal: Cast to Number failed for value "NaN" (type number) at path "grandTotal"
+2026 04 03	18:02:59	cbc282fe-b466-4213-a571-97d2767093d7	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 15	19:46:00	bd4ba0d1-f877-4200-9f10-001f35bd88a1	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 15	20:00:25	1c35e5fc-f9f4-462c-a873-8c0fe3310473	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 15	20:17:58	efacb61d-0660-4161-8ed4-d77bd23c4a28	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 15	20:21:16	e9141ecf-f9d3-494a-992f-ad0b5b0ff9db	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 15	20:23:39	9f8ad1e7-17a1-4416-a0cd-2fb9b1dba7f8	TypeError: Cannot set properties of null (setting 'refreshToken')
