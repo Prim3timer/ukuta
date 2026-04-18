@@ -1,22 +1,18 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 const verifyJWT = (req, res, next) => {
-    const authHeader = req.headers.authorization || req.headers.Authorization;
-    if (!authHeader?.startsWith('Bearer ')) return res.sendStatus(401);
+  const authHeader = req.headers.authorization || req.headers.Authorization;
+  if (!authHeader?.startsWith("Bearer ")) return res.sendStatus(401);
 
-    // get token which is after the space
-    const token = authHeader.split(' ')[1];
+  // get token which is after the space
+  const token = authHeader.split(" ")[1];
 
-    jwt.verify(
-        token,
-        process.env.ACCESS_TOKEN_SECRET,
-        (err, decoded) => {
-            if (err) return res.sendStatus(403); //invalid token
-            req.user = decoded.UserInfo.username;
-            req.roles = decoded.UserInfo.roles;
-            next();
-        }
-    );
-}
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, decoded) => {
+    if (err) return res.sendStatus(403); //invalid token
+    req.user = decoded.UserInfo.username;
+    req.roles = decoded.UserInfo.roles;
+    next();
+  });
+};
 
-module.exports = verifyJWT
+module.exports = verifyJWT;

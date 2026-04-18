@@ -5,7 +5,8 @@ const bcrypt = require("bcrypt");
 
 const getAllUsers = asyncHandler(async (req, res) => {
   const users = await GroceryUser.find();
-  if (!users.length) return res.status(204).json({ message: "No users found" });
+  if (!users?.length)
+    return res.status(204).json({ message: "No users found" });
   res.json({ users });
 });
 

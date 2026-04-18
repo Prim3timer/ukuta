@@ -3,6 +3,6 @@ const router = express.Router();
 
 const groceryRefreshTokenController = require("../controllers/groceryRefreshTokenController");
 
-router.route("/").get(groceryRefreshTokenController.handleRefreshToken);
+router.route("/").get(groceryRefreshTokenController.groceHandleRefreshToken);
 
 module.exports = router;

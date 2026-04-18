@@ -275,7 +275,7 @@ app.use("/register", require("./routes/registerRoutes"));
 app.use("/grocery-register", require("./routes/groceryRegisterRoutes"));
 app.use("/sessions", require("./routes/sessionsRoutes"));
 app.use("/refresh", require("./routes/refreshRoutes"));
-app.use("grocery-refresh", require("./routes/groceryRefreshRoutes"));
+app.use("/grocery-refresh", require("./routes/groceryRefreshRoutes"));
 // app.use('/create-checkout-session', require('./routes/cartRoutes'))
 
 app.use("/transactions", require("./routes/transactionRoutes"));
