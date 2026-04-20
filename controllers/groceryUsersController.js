@@ -4,10 +4,14 @@ const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
 
 const getAllUsers = asyncHandler(async (req, res) => {
-  const users = await GroceryUser.find();
-  if (!users?.length)
-    return res.status(204).json({ message: "No users found" });
-  res.json({ users });
+  try {
+    const users = await GroceryUser.find();
+    if (!users?.length)
+      return res.status(204).json({ message: "No users found" });
+    res.json({ users });
+  } catch (error) {
+    res.send(error.message);
+  }
 });
 
 // @desc Create new user

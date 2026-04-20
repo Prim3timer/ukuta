@@ -16,6 +16,7 @@ const groceHandleRefreshToken = asyncHandler(async (req, res) => {
   const foundUser = await GroceryUser.findOne({ refreshToken }).exec();
   console.log({ foundUserGro: foundUser });
   const users = await GroceryUser.find().exec();
+  console.log({ userFounded: foundUser });
   if (!foundUser) return res.sendStatus(403);
   // we will use the jwt dependency to verify the refresh token
   jwt.verify(
@@ -23,7 +24,6 @@ const groceHandleRefreshToken = asyncHandler(async (req, res) => {
     process.env.REFRESH_TOKEN_SECRET,
     asyncHandler(async (err, decoded) => {
       if (err) {
-        console.log({ errMsg: error.message });
         return res.sendStatus(403);
       }
 
@@ -47,6 +47,7 @@ const groceHandleRefreshToken = asyncHandler(async (req, res) => {
         process.env.ACCESS_TOKEN_SECRET,
         { expiresIn: "15m" },
       );
+      console.log({ groceAccessToken: accessToken });
       res.json({ accessToken, roles, username, id, users });
     }),
   );

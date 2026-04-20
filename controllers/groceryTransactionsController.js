@@ -6,11 +6,15 @@ const stripe = require("stripe")(process.env.STRIPE_PRIVATE_KEY);
 // const stripe = require("stripe")(process.env.STRIPE_REAL_LIVE_KEY);
 
 const getAllTransactions = asyncHandler(async (req, res) => {
-  const groceryTransactions = await GroceryTransaction.find();
-  if (!groceryTransactions.length) {
-    return res.status(400).json("no transaction found");
+  try {
+    const groceryTransactions = await GroceryTransaction.find();
+    if (!groceryTransactions.length) {
+      return res.status(400).json("no transaction found");
+    }
+    res.json(groceryTransactions);
+  } catch (error) {
+    console.log({ cenk: error });
   }
-  res.json(groceryTransactions);
 });
 
 const createNewTransaction = asyncHandler(async (req, res) => {
