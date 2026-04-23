@@ -608,3 +608,9 @@
 2026 04 20	08:49:04	1c60f01c-578e-475a-98be-c4c8eea61a12	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 04 20	11:21:16	1e941d15-37d8-47a1-b0e8-1436a828f01f	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 04 20	11:21:22	81c37f8f-2e26-464a-b0a4-807740ff3d0a	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 21	10:11:05	b95dbc2b-f77c-4dbb-8d34-b606bec6f3a8	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "GroceryTransaction"
+2026 04 21	10:11:18	2bc3a0fd-28b8-4179-b912-8ef3f61cdf6c	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "GroceryTransaction"
+2026 04 21	10:12:49	f60e559e-5015-4153-9865-c6e71f14a4dd	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "GroceryTransaction"
+2026 04 22	19:22:23	64eec66b-6104-4ebb-b6bf-4121c74369c9	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 22	20:06:53	902b33ca-9b20-4c8a-8354-df048f61b517	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 22	20:10:50	62b8190e-8ba5-43ed-82e2-116384a91c63	Error: read ECONNRESET
