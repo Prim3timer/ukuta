@@ -10,7 +10,7 @@ const groceHandleRefreshToken = asyncHandler(async (req, res) => {
   console.log({ cookeiChecker: cookies?.jwt });
   if (!cookies?.jwt) return res.sendStatus(401);
   //else, set the refresh token variable to that cookie
-  const refreshToken = cookies.jwt;
+  const refreshToken = cookies?.jwt;
   // find by refresh token
   console.log({ groceRefToken: refreshToken });
   const foundUser = await GroceryUser.findOne({ refreshToken }).exec();
