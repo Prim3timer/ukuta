@@ -45,7 +45,7 @@ const groceHandleRefreshToken = asyncHandler(async (req, res) => {
           },
         },
         process.env.ACCESS_TOKEN_SECRET,
-        { expiresIn: "10s" },
+        { expiresIn: "15m" },
       );
       console.log({ groceAccessToken: accessToken });
       res.json({ accessToken, roles, username, id, users });
