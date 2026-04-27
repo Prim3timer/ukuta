@@ -183,6 +183,7 @@ let updateInventoryy = async (req, res) => {
 };
 
 const updateItemTexts = asyncHandler(async (req, res) => {
+  console.log({ reqQuerry: req });
   const obj = req.params.obj;
   const id = req.query.id;
   const firstName = req.query.firstName;

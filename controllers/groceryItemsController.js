@@ -120,7 +120,6 @@ const updateItemTexts = asyncHandler(async (req, res) => {
       category,
       denominator,
       availableQuantities,
-      dateCreated: now,
       numerator,
       qty: quantity,
     },
