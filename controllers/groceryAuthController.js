@@ -15,6 +15,7 @@ const handleLogin = asyncHandler(async (req, res) => {
   if (!foundUser || !foundUser.active) return res.sendStatus(401);
   // evaluate password
   const match = await bcrypt.compare(pwd, foundUser.password);
+  console.log({ match });
   if (!match) return res.status(401).json({ message: "Unauthorized" });
   if (match) {
     console.log("logged in");

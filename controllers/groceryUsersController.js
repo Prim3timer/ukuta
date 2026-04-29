@@ -1,5 +1,5 @@
 const GroceryUser = require("../models/GroceryUser");
-const Transaction = require("../models/Transaction");
+const GroceryTransaction = require("../models/GroceryTransaction");
 const asyncHandler = require("express-async-handler");
 const bcrypt = require("bcrypt");
 
@@ -77,12 +77,15 @@ const deleteUser = asyncHandler(async (req, res) => {
 });
 
 const updateUser = asyncHandler(async (req, res) => {
+  console.log("updating....");
   const { roles, username, password, active } = req.body;
 
-  console.log({ roles });
   const id = req.params.id;
+  console.log({ reqBody: req.body, id });
+  // console.log({ reqQuery: req.query.updatedPerson, id });
 
   const foundUser = await GroceryUser.findById(id).exec();
+  console.log({ active });
   if (foundUser) {
     const currentItem = await GroceryUser.findOneAndUpdate(
       {

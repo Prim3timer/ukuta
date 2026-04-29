@@ -619,3 +619,42 @@
 2026 04 25	21:49:41	c682e999-b1df-4114-bc5d-0e5b4b0941c3	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 04 26	17:54:13	e1b653f6-8ce7-4433-ba7e-164ae08e3534	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 04 26	19:14:24	bccfdba4-757e-441d-b770-ada63efc65b7	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 27	17:33:00	b1f30c92-23f3-4ac3-a2bb-0cef39884b31	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:33:00	09d40d22-8e1f-4302-bb95-aafd344f4fce	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:33:06	52ff2912-680d-4de8-952f-8a228644b144	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:33:06	1e786758-c573-4d7a-8561-b8ced360e208	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:33:26	10abbe06-a2f8-4902-a6bc-74b3fceea321	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:33:34	cd75161e-4aea-4d58-bc9b-34b156027c3c	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:33:34	b423070a-4f3b-4d44-9279-f77bc53a1193	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:33:54	4e34ef5c-cb3f-4c8e-b5dd-35145907e9de	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:00	ab63a821-778d-4453-984f-ee1ab5655705	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:03	65018acc-8d51-4cbe-8e32-efe60f8dc090	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:05	36ee9578-4f42-47f7-952b-872dd452af12	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:07	00ea9fac-978a-4537-a3c1-7a933d4d88e8	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:10	8ec71ca7-51b7-41e5-90c4-d831d1d11346	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:12	11277d6a-4f20-497b-bef9-5af6310551a4	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:15	d9d2ddab-81b3-4021-9d83-184cb58e042c	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:16	1e0ae144-8dbb-4e1f-a1bc-5ca70ad926ba	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:17	0b569839-7739-4de5-8c81-262b17e9bb14	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:22	cca5e255-e25b-4837-b3a4-308cd5c55bf1	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:23	4224bc9d-69f9-4dcf-8fbc-54e5e48c505d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:28	05e0b6d2-1c6d-4a4f-8bd7-df7f334bcbf6	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:30	9cc0fe41-a364-43cd-8638-9b3bb1e003d6	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:33	60a304c7-98b4-4d5f-9484-82324f4cdbbc	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	17:35:34	c3f56603-e95b-43b5-ad36-8ae8a331eead	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
+2026 04 27	21:23:26	73b9c043-2534-4cd5-b408-90d76b914699	Error: read ECONNRESET
+2026 04 27	22:18:44	955cd610-f583-4566-bcfb-484e289aedb2	TypeError: Cannot read properties of undefined (reading 'startsWith')
+2026 04 27	22:19:40	ec3991c4-cc7c-40b2-a524-824d6132b8ab	TypeError: Cannot read properties of undefined (reading 'split')
+2026 04 27	22:21:05	fa027d4f-6a04-4fe8-a646-de2db31fee3d	TypeError: Cannot read properties of undefined (reading 'split')
+2026 04 27	22:21:05	7692d0fb-a554-4c33-9664-b30c586d157e	TypeError: Cannot read properties of undefined (reading 'split')
+2026 04 27	22:21:05	9e4b2213-2f0d-4620-a3a6-5b5f3ff6ef58	TypeError: Cannot read properties of undefined (reading 'split')
+2026 04 27	22:21:05	8cc0be48-cf70-4f36-a853-89520e4d32cc	TypeError: Cannot read properties of undefined (reading 'split')
+2026 04 27	22:21:05	46806763-a731-4c2a-8c5b-e6e716a4e5f3	TypeError: Cannot read properties of undefined (reading 'split')
+2026 04 27	22:21:27	9ac17c7c-1cea-4cca-9568-8b0f75c475f3	TypeError: Cannot read properties of undefined (reading 'split')
+2026 04 28	11:40:35	84aa5c6e-f05d-402f-b35d-9c2d391ee0fc	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 04 28	19:22:02	25ad3a66-e0a2-4cc1-92a8-de006eb36382	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "GroceryUser"
+2026 04 28	19:27:36	8e38705c-c999-4acb-ae58-656f6f9ce370	Error: No such checkout.session: on&roles
+2026 04 28	19:30:22	729db48e-e6e9-486c-a3f3-8a394cb0cafe	Error: No such checkout.session: on&roles
+2026 04 28	20:27:45	0be870b2-5f25-4dc7-9329-295884ab1611	Error: No such checkout.session: on&roles
+2026 04 28	20:59:38	dd442026-d857-4c67-bd8a-0e4162199f1d	ReferenceError: Cannot access 'id' before initialization
+2026 04 28	21:10:21	1c4ba08d-2ebd-4fc4-989d-c78e346602f8	SyntaxError: "[object Object]" is not valid JSON

@@ -125,3 +125,4 @@
 2026 04 04	17:30:38	d472bdbf-c2b3-4b23-9a42-2e80c18745a2	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
 2026 04 15	19:31:31	7834c433-f832-4379-898b-fe20716a11c5	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
 2026 04 21	21:13:57	9ad571e8-2413-454a-aa7c-e80c488ead4a	undefined: ETIMEOUT	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
+2026 04 27	21:05:01	f81710dd-18ae-47b4-aef9-d13b298c2243	undefined: ECONNREFUSED	 querySrv	_mongodb._tcp.cluster0.n0kay20.mongodb.net
