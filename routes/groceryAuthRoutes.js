@@ -7,5 +7,6 @@ const loginLimiter = require("../middleware/loginLimiter");
 router.route("/").post(groceryAuthController.handleLogin);
 // router.route('/refresh').get(groceryRefreshTokenController.handleRefreshToken);
 router.route("/logout").get(groceryAuthController.handleLogout);
+router.route("/users").get(groceryAuthController.getUsers);
 
 module.exports = router;

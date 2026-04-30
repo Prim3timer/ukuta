@@ -658,3 +658,23 @@
 2026 04 28	20:27:45	0be870b2-5f25-4dc7-9329-295884ab1611	Error: No such checkout.session: on&roles
 2026 04 28	20:59:38	dd442026-d857-4c67-bd8a-0e4162199f1d	ReferenceError: Cannot access 'id' before initialization
 2026 04 28	21:10:21	1c4ba08d-2ebd-4fc4-989d-c78e346602f8	SyntaxError: "[object Object]" is not valid JSON
+2026 04 29	20:08:16	0f29aca4-d9f5-4de1-8ef1-3ce7b1882370	ReferenceError: GroceryUsers is not defined
+2026 04 29	20:08:26	57ef87b4-2e50-4650-909c-dfc8bc0a7140	ReferenceError: GroceryUsers is not defined
+2026 04 29	20:08:53	0fa7ba1d-c540-461d-88c4-d18051cc61ff	ReferenceError: GroceryUsers is not defined
+2026 04 29	20:09:16	ac42cecb-fc15-400a-a3b9-f2991b132962	ReferenceError: GroceryUsers is not defined
+2026 04 29	21:18:05	6a8d1f25-c958-4da8-baf4-93d3c43899f8	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:18:05	70b0f8eb-142d-45dd-a4e2-f48f6f2fa6be	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:18:05	b24eb3d8-311a-4930-89d6-66fc54e8eeba	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:18:26	679bf8f1-1b1b-4474-ba31-27da7dd24dc4	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:18:26	1279160f-6d27-40f6-a31c-6b4c2361835c	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:18:26	80627f3a-56cf-4d8d-b7aa-515bff274802	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:18:56	3458e177-ceed-49b7-8fcb-98e54d513a4e	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:19:01	19b89cf6-f9d2-452d-9a7b-e289c5b88a38	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:19:01	60e9f676-2e32-43b3-809c-0b136e1a8c16	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:19:03	cc1ae749-6838-4b8d-8217-1cc66ddc0b8a	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:19:06	e7e8d4e9-a246-44fd-bd35-ba66fe2df1a3	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:19:08	a2f589ab-b888-47f8-a926-82e7e497499d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:19:10	32b227a0-1e63-453e-92ef-51bb29b39d1f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 04 29	21:46:33	f10e273a-e7d6-4142-9106-32a02f6d95bf	Error: Cannot set headers after they are sent to the client
+2026 04 29	21:47:18	2df221ae-525d-4145-9779-824d546d1780	CastError: Cast to ObjectId failed for value "undefined" (type string) at path "_id" for model "GroceryItems"
+2026 04 29	22:00:27	61e19fd3-6493-44e6-84f9-7d02d9fcba6b	Error: Cannot set headers after they are sent to the client

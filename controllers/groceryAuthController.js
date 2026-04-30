@@ -71,4 +71,9 @@ const handleLogout = asyncHandler(async (req, res) => {
   res.sendStatus(204);
 });
 
-module.exports = { handleLogin, handleLogout };
+const getUsers = asyncHandler(async (req, res) => {
+  const response = await GroceryUsers.find();
+  res.json(response);
+});
+
+module.exports = { handleLogin, handleLogout, getUsers };
