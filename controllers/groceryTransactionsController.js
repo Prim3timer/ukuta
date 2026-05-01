@@ -117,7 +117,7 @@ const deleteTransaction = asyncHandler(async (req, res) => {
 const makePayment = asyncHandler(async (req, res) => {
   try {
     const theGoods = req.body.goods;
-    console.log({ goods: req.body.goods });
+    console.log({ goods: JSON.stringify(req.body.goods, null, 2) });
     const groceries = await GroceryItems.find();
     const session = await stripe.checkout.sessions.create({
       payment_method_types: ["card"],
@@ -131,9 +131,9 @@ const makePayment = asyncHandler(async (req, res) => {
             product_data: {
               name: storeItem.name,
             },
-            unit_amount: storeItem.availablePrices[good.index] * 100,
+            unit_amount: (storeItem.availablePrices[good.index] * 100) / 1000,
           },
-          quantity: good.qty,
+          quantity: good.qty * 1000,
           metadata: {
             id: good._id,
             index: good.index,
