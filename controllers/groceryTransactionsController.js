@@ -131,9 +131,9 @@ const makePayment = asyncHandler(async (req, res) => {
             product_data: {
               name: storeItem.name,
             },
-            unit_amount: (storeItem.availablePrices[good.index] * 100) / 1000,
+            unit_amount: storeItem.availablePrices[good.index] * 100,
           },
-          quantity: good.qty * 1000,
+          quantity: good.qty,
           metadata: {
             id: good._id,
             index: good.index,
