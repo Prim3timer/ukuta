@@ -684,3 +684,7 @@
 2026 04 30	22:05:56	13808e61-df48-4739-82a2-4e770574c1b1	Error: Cannot set headers after they are sent to the client
 2026 04 30	22:16:33	f8d91b16-636a-4544-a5b6-265d254d17b8	Error: Cannot set headers after they are sent to the client
 2026 04 30	22:53:35	d7d05dfc-4adb-4a03-8646-e737edf7cd3b	Error: Cannot set headers after they are sent to the client
+2026 05 03	20:41:44	f4d6aaf3-bdad-401c-852d-bde715b528f7	Error: Cannot set headers after they are sent to the client
+2026 05 03	20:54:08	11d6754b-fb80-48f3-89a6-395ecb06ce06	Error: Cannot set headers after they are sent to the client
+2026 05 05	11:42:27	efbfa490-de53-4c91-a609-20a5e8d02b95	SyntaxError: Unexpected token 'e', "newItem" is not valid JSON
+2026 05 05	11:44:47	426e7875-9398-410d-8ab1-401198e80f4a	CastError: Cast to Number failed for value "NaN" (type number) at path "qty"

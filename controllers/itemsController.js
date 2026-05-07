@@ -188,6 +188,7 @@ const updateItemTexts = asyncHandler(async (req, res) => {
   const id = req.query.id;
   const firstName = req.query.firstName;
   const newItem = JSON.parse(obj);
+  console.log({ newItem });
   const { name, unitMeasure, price, quantity, description, date } = newItem;
   console.log({ newItem, id, name, firstName });
   const currentItem = await Item.findById(id);

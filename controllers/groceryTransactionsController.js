@@ -227,7 +227,7 @@ const thanksAlert = asyncHandler(async (req, res) => {
       price: unit_amount / 100,
       total: amount_subtotal / 100,
       name: description,
-      qty: quantity,
+      qty: quantity / 1000,
       index,
       id,
       unitMeasure: currentItem.availableUnitMeasures[index],
