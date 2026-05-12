@@ -189,7 +189,8 @@ const updateItemTexts = asyncHandler(async (req, res) => {
   const firstName = req.query.firstName;
   const newItem = JSON.parse(obj);
   console.log({ newItem });
-  const { name, unitMeasure, price, quantity, description, date } = newItem;
+  const { name, unitMeasure, price, quantity, description, date, category } =
+    newItem;
   console.log({ newItem, id, name, firstName });
   const currentItem = await Item.findById(id);
   if (currentItem) {
@@ -198,6 +199,7 @@ const updateItemTexts = asyncHandler(async (req, res) => {
       {
         name,
         unitMeasure,
+        category,
         availablePrices: price,
         qty: Number(quantity),
         description,
