@@ -693,3 +693,15 @@
 2026 05 11	09:23:42	6a7f979d-d178-426d-826c-948418bbf73b	SyntaxError: Unterminated string in JSON at position 25
 2026 05 11	19:49:26	6746d393-04e1-40f6-923a-dfc16bc8357f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 2026 05 11	19:50:39	13d28dba-09d2-4573-992c-1857e99537d0	ReferenceError: catogory is not defined
+2026 05 12	07:31:26	07e11e59-201a-475c-954e-e96c7d4be616	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 05 12	07:31:26	f8f5fa5f-2ff4-4623-9f3d-327878a79c4e	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 05 12	07:31:38	f453f00d-e854-4674-abb1-cb98034e0164	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 05 12	07:31:39	96c94967-4015-4cb9-8909-1df2c5e9ec97	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 05 12	07:31:39	b3e1d896-b3ba-4423-8e64-720699b96061	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 05 12	07:31:39	ccb1b50a-a230-4e37-a187-bc90bdfc597f	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 05 13	19:41:59	5f6d5867-db10-412f-8302-7ce9b141ccb7	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 05 13	19:42:17	b409e0ba-1c25-4c22-ab64-13df44f0f15a	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 05 13	19:42:19	ac65df30-32f6-4278-8ceb-0fba885487eb	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 05 13	19:42:29	3885dbc0-9097-4d17-833d-281056e619a4	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
+2026 05 15	10:54:47	f8c2889c-0d41-4821-9e78-298c492cced8	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 05 17	20:19:52	d3ba0b7a-afcd-4ad1-9679-6c2b35e333d9	TypeError: Cannot set properties of null (setting 'refreshToken')
