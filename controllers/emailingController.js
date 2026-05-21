@@ -1,45 +1,116 @@
 const nodemailer = require("nodemailer");
+const Mailgen = require("mailgen");
 
-const sendMail = async (email, subject, message) => {
-  try {
-    const transporter = nodemailer.createTestAccount({
-      host: "smtp.gmail.com",
-      service: "gmail",
-      post: 587,
-      secure: true,
-      auth: {
-        user: "majicmethod@gmail.com",
-        pass: "qxompjkfobinbydl",
-        // pass: "qxom pjkf obin bydl",
-      },
+//  pass: "qxompjkfobinbydl",
+// pass: "qxom pjkf obin bydl",
+
+const EMAIL = "majicmethod@gmail.com";
+const PASSWORD = "qxompjkfobinbydl";
+
+/** send mail from testing account */
+const signup = async (req, res) => {
+  /** testing account */
+  let testAccount = await nodemailer.createTestAccount();
+
+  // create reusable transporter object using the default SMTP transport
+  let transporter = nodemailer.createTransport({
+    host: "smtp.ethereal.email",
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+      user: testAccount.user, // generated ethereal user
+      pass: testAccount.pass, // generated ethereal password
+    },
+  });
+
+  let message = {
+    from: '"Fred Foo 👻" <foo@example.com>', // sender address
+    to: "bar@example.com, baz@example.com", // list of receivers
+    subject: "Hello ✔", // Subject line
+    text: "Successfully Register with us.", // plain text body
+    html: "<b>Successfully Register with us.</b>", // html body
+  };
+
+  transporter
+    .sendMail(message)
+    .then((info) => {
+      return res.status(201).json({
+        msg: "you should receive an email",
+        info: info.messageId,
+        preview: nodemailer.getTestMessageUrl(info),
+      });
+    })
+    .catch((error) => {
+      return res.status(500).json({ error });
     });
-    const info = await transporter.sendMail({
-      from: "majicmethod@gmail.com",
-      to: "amaluekwelie@gmail.com",
-      subject,
-      message,
-      html: "<b>Hello World</b>",
-    });
-    console.log("email sent successfully");
-  } catch (error) {
-    console.log("email not sent");
-    console.log(error);
-  }
+
+  // res.status(201).json("Signup Successfully...!");
 };
 
-const mailSender = async (req, res) => {
+/** send mail from real gmail account */
+const getbill = (req, res) => {
+  // const { userEmail } = req.body;
   console.log({ reqBody: req.body });
-  const { email, subject, message } = req.body;
-  try {
-    const response = await sendEmai(req.body);
-    if (response) {
-      res.send(response.data);
-    }
-  } catch (error) {
-    res.status(500).send(error.message);
-  }
+  console.log("on the mail");
+  let config = {
+    service: "gmail",
+    auth: {
+      user: EMAIL,
+      pass: PASSWORD,
+    },
+  };
+
+  let transporter = nodemailer.createTransport(config);
+
+  let MailGenerator = new Mailgen({
+    theme: "default",
+    product: {
+      name: "Mailgen",
+      link: "https://mailgen.js/",
+    },
+  });
+
+  let response = {
+    body: {
+      name: "Daily Tuition",
+      intro: "Your bill has arrived!",
+      table: {
+        data: [
+          {
+            item: "Nodemailer Stack Book",
+            description: "A Backend application",
+            price: "$10.99",
+          },
+        ],
+      },
+      outro: "Looking forward to do more business",
+    },
+  };
+
+  let mail = MailGenerator.generate(response);
+
+  let message = {
+    from: EMAIL,
+    to: "amaluekwelie@gmail.com",
+    subject: "Place Order",
+    // html: mail,
+  };
+
+  transporter
+    .sendMail(message)
+    .then(() => {
+      return res.status(201).json({
+        msg: "you should receive an email",
+      });
+    })
+    .catch((error) => {
+      return res.status(500).json({ error });
+    });
+
+  // res.json("getBill Successfully...!");
 };
 
 module.exports = {
-  mailSender,
+  signup,
+  getbill,
 };

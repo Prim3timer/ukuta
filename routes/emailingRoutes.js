@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
-const emailingController = require("../controllers/emailingController");
 
-router.route("/").post(emailingController.mailSender);
+const { signup, getbill } = require("../controllers/emailingController");
+
+/** HTTP Reqeust */
+// router.post("/emailing", signup);
+router.route("/").post(getbill);
 
 module.exports = router;
