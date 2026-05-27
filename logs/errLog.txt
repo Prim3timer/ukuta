@@ -705,3 +705,8 @@
 2026 05 13	19:42:29	3885dbc0-9097-4d17-833d-281056e619a4	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-00.n0kay20.mongodb.net
 2026 05 15	10:54:47	f8c2889c-0d41-4821-9e78-298c492cced8	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 05 17	20:19:52	d3ba0b7a-afcd-4ad1-9679-6c2b35e333d9	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 05 22	01:14:33	4b3d9c06-cb75-403b-944b-ce98a371332c	TypeError: Cannot read properties of undefined (reading 'message')
+2026 05 23	12:23:33	86d0a735-1934-46b1-afeb-abf245c9e1a2	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 05 27	11:12:55	b36ce4c0-8f5c-4a57-a18d-353b8a921c3c	SyntaxError: Unexpected token '"', ""Roosters1#"" is not valid JSON
+2026 05 27	11:21:12	d5040bf2-1cc5-45b8-b0c6-5381038f3fae	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 05 27	12:29:09	71326702-efb8-4203-a384-effb260f4f9e	ReferenceError: id is not defined
