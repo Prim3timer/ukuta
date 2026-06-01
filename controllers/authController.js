@@ -12,7 +12,8 @@ const handleLogin = asyncHandler(async (req, res) => {
 
   const foundUser = await User.findOne({ username: user }).exec();
   // console.log({foundUser})
-  if (!foundUser || !foundUser.active) return res.sendStatus(401);
+  if (!foundUser || !foundUser.active || foundUser.verified !== true)
+    return res.sendStatus(401);
   // evaluate password
   const match = await bcrypt.compare(pwd, foundUser.password);
   if (!match) return res.status(401).json({ message: "Unauthorized" });
@@ -48,8 +49,9 @@ const handleLogin = asyncHandler(async (req, res) => {
     });
     const username = foundUser.username;
     const id = foundUser._id;
+    const verified = foundUser.verified;
     // Send authorization roles and access token to user
-    res.json({ roles, accessToken, username, id });
+    res.json({ roles, accessToken, username, id, verified });
   }
 });
 

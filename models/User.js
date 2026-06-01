@@ -1,37 +1,42 @@
-const mongoose = require('mongoose')
-const { Employee } = require('../config/roles_list')
+const mongoose = require("mongoose");
+const { Employee } = require("../config/roles_list");
 
 const userSchema = new mongoose.Schema({
-    username: {
-        type: String,
-        require: true
-    },
+  username: {
+    type: String,
+    require: true,
+  },
 
-    email: {
-        type: String
+  email: {
+    type: String,
+  },
+  roles: {
+    Employee: {
+      type: Number,
+      default: 2001,
     },
-    roles: {
-        Employee: {
-            type: Number,
-            default: 2001
-        }, Manager: Number,
-        Admin: Number
-    },
-    password: {
-        type: String,
-        require: true
-    },
-    active: {
-        type: Boolean,
-        default: true
-    },
-    cart: {
-        type: Array
-    },
-    sessionId: {
-        type: String
-    },
-    refreshToken: String
-})
+    Manager: Number,
+    Admin: Number,
+  },
+  password: {
+    type: String,
+    require: true,
+  },
+  active: {
+    type: Boolean,
+    default: true,
+  },
+  verified: {
+    type: Boolean,
+    default: false,
+  },
+  cart: {
+    type: Array,
+  },
+  sessionId: {
+    type: String,
+  },
+  refreshToken: String,
+});
 
-module.exports = mongoose.model("User", userSchema)
+module.exports = mongoose.model("User", userSchema);

@@ -710,3 +710,6 @@
 2026 05 27	11:12:55	b36ce4c0-8f5c-4a57-a18d-353b8a921c3c	SyntaxError: Unexpected token '"', ""Roosters1#"" is not valid JSON
 2026 05 27	11:21:12	d5040bf2-1cc5-45b8-b0c6-5381038f3fae	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 05 27	12:29:09	71326702-efb8-4203-a384-effb260f4f9e	ReferenceError: id is not defined
+2026 05 28	16:36:39	5cbb57c2-bf8f-46eb-ae34-f54a226c6ca4	TypeError: Cannot read properties of undefined (reading 'message')
+2026 05 28	16:36:40	bbe578c6-f1ec-4f39-a6be-825359d4b5bd	TypeError: Cannot read properties of undefined (reading 'message')
+2026 05 28	16:36:40	645c6d73-373f-4400-bd9d-aaabf0a06bc5	TypeError: Cannot read properties of undefined (reading 'message')

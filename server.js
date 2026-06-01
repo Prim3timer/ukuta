@@ -14,7 +14,9 @@ const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const fs = require("fs");
 const Item = require("./models/Item");
+const User = require("./models/User");
 const GroceryItem = require("./models/GroceryItem");
+const bcrypt = require("bcrypt");
 
 // console.log(process.env.NODE_ENV)
 
@@ -264,6 +266,55 @@ app.delete("/grocery-delete-pic/:initialPic", async (req, res) => {
 //   );
 //   res.json({ message: { response, response2 } });
 // });
+
+app.get("/special-users", async (req, res) => {
+  const response = await User.find().exec();
+  res.send(response);
+});
+
+app.patch("/reset-password/:userId", async (req, res) => {
+  try {
+    const { userId } = req.params;
+    const { password } = req.body;
+    console.log({ userId, password });
+    const foundUser = await User.findById(userId).exec();
+    if (foundUser) {
+      const currentItem = await User.findOneAndUpdate(
+        {
+          _id: userId,
+        },
+        {
+          password: await bcrypt.hash(password, 10),
+          verified: true,
+        },
+      );
+      if (currentItem) {
+        res.send("password successfully updated!");
+      }
+    }
+  } catch (error) {
+    res.json({ message: error.message });
+  }
+});
+
+app.patch("/verify-email/:email", async (req, res) => {
+  try {
+    const { email } = req.params;
+    console.log({ email });
+    const response = await User.findOneAndUpdate(
+      { email: email },
+      {
+        verified: true,
+      },
+    );
+    console.log({ response });
+    res.json(
+      `Welcome, ${response.username}. Your email has been verified. Enter your login details`,
+    );
+  } catch (error) {
+    console.log({ message: error.message });
+  }
+});
 
 app.use("/", express.static(path.join(__dirname, "public")));
 

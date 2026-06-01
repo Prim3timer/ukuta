@@ -14,8 +14,6 @@ router.route("/delete/:id").delete(usersController.deleteUser);
 
 router.route("/update/:id").patch(usersController.updateUser);
 
-router.route("/reset-password/:userId").patch(usersController.resetPassword);
-
 router.route("/sessions/:id").post(usersController.addToCart);
 
 router.route("/sessions/delete").delete(usersController.deleteCartItem);

@@ -46,26 +46,6 @@ const createNewUser = asyncHandler(async (req, res) => {
   }
 });
 
-const resetPassword = asyncHandler(async (req, res) => {
-  const { userId } = req.params;
-  const { password } = req.body;
-  console.log({ userId, password });
-  const foundUser = await User.findById(userId).exec();
-  if (foundUser) {
-    const currentItem = await User.findOneAndUpdate(
-      {
-        _id: userId,
-      },
-      {
-        password: await bcrypt.hash(password, 10),
-      },
-    );
-  }
-  if (currentItem) {
-    res.send("password updated");
-  }
-});
-
 // @desc Delete a user
 // @route DELETE /users
 // @access Private
@@ -179,5 +159,4 @@ module.exports = {
   addToCart,
   deleteCartItem,
   clearCart,
-  resetPassword,
 };
