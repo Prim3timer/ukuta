@@ -90,24 +90,28 @@ app.post(
 
     let fiver = [];
     let i = 0;
-    while (i < 5) {
-      fiver.push({ id: i + 1, name: "no image" });
-      i++;
+    try {
+      while (i < 5) {
+        fiver.push({ id: i + 1, name: "no image" });
+        i++;
+      }
+      const { name } = req.params;
+      console.log({ name });
+      const fileNames = req.files.map((file, index) => {
+        fiver.splice(index, 1, { id: index + 1, name: file.originalname });
+        return { id: index + 1, name: file.originalname };
+      });
+      console.log({ fiver });
+      const response = await Item.find({ name });
+      console.log({ response });
+      if (response) {
+        // console.log({ id: response[0]._id });
+        await Item.findOneAndUpdate({ _id: response[0]._id }, { img: fiver });
+      }
+      res.send("uploaded");
+    } catch (error) {
+      console.log(error);
     }
-    const { name } = req.params;
-    console.log({ name });
-    const fileNames = req.files.map((file, index) => {
-      fiver.splice(index, 1, { id: index + 1, name: file.originalname });
-      return { id: index + 1, name: file.originalname };
-    });
-    console.log({ fiver });
-    const response = await Item.find({ name });
-    console.log({ response });
-    if (response) {
-      console.log({ id: response[0]._id });
-      await Item.findOneAndUpdate({ _id: response[0]._id }, { img: fiver });
-    }
-    res.send("uploaded");
   },
 );
 
@@ -353,7 +357,6 @@ app.all("/*", (req, res) => {
 
 app.use(errorHandler);
 mongoose.connection.once("open", () => {
-  console.log("connected to mongoDB");
   app.listen(PORT, () => console.log(`Server runnning on port ${PORT}`));
 });
 

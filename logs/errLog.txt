@@ -713,3 +713,13 @@
 2026 05 28	16:36:39	5cbb57c2-bf8f-46eb-ae34-f54a226c6ca4	TypeError: Cannot read properties of undefined (reading 'message')
 2026 05 28	16:36:40	bbe578c6-f1ec-4f39-a6be-825359d4b5bd	TypeError: Cannot read properties of undefined (reading 'message')
 2026 05 28	16:36:40	645c6d73-373f-4400-bd9d-aaabf0a06bc5	TypeError: Cannot read properties of undefined (reading 'message')
+2026 06 04	21:42:26	fdb3fc42-b155-4d0e-bc78-840d51bd5e63	Error: read ECONNRESET
+2026 06 04	21:42:31	27fd111f-8b65-4b0f-8acc-97396c3b1dd7	Error: read ECONNRESET
+2026 06 04	21:42:32	1dea3d38-49bd-42ea-9f8c-78901b775f0f	Error: read ECONNRESET
+2026 06 04	21:42:37	d29b072e-47e7-45b3-bb6c-2d1055dccff2	Error: read ECONNRESET
+2026 06 04	21:42:44	2d1710ae-4198-4440-bc03-ac6987d79c7b	Error: read ECONNRESET
+2026 06 04	21:42:53	e6864fb8-e53d-496f-a90c-87f6915d662f	Error: read ECONNRESET
+2026 06 04	21:43:38	be0e95d2-23ab-4e09-abb7-8848b17c4f0a	MongoNetworkError: read ECONNRESET
+2026 06 04	21:44:08	a9746553-7e8f-4d46-bb96-9ff1fc648546	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
+2026 06 04	21:44:25	79f31161-419b-4509-b7d0-84729d57c265	Error: read ECONNRESET
+2026 06 05	18:11:13	13031b2e-5a3e-4878-9b79-c5e8422e7441	Error: read ECONNRESET
