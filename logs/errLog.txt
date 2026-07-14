@@ -723,3 +723,6 @@
 2026 06 04	21:44:08	a9746553-7e8f-4d46-bb96-9ff1fc648546	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-02.n0kay20.mongodb.net
 2026 06 04	21:44:25	79f31161-419b-4509-b7d0-84729d57c265	Error: read ECONNRESET
 2026 06 05	18:11:13	13031b2e-5a3e-4878-9b79-c5e8422e7441	Error: read ECONNRESET
+2026 06 08	00:26:49	bf2175ef-2543-42b8-94c0-afd197a298ea	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 06 13	23:25:42	e583f6dc-032b-42df-ad00-db042368552c	Error: Cannot set headers after they are sent to the client
+2026 07 11	14:04:47	60bbfc44-d506-403f-a713-b797596e3355	URIError: Failed to decode param 'dikeekwelie@gmail.com%duration=1783793068217'
