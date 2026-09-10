@@ -20,7 +20,6 @@ const handleNewUser = async (req, res) => {
     const result = await GroceryUser.create({
       username: user,
       password: hashedPwd,
-      // email,
     });
 
     console.log(result);
