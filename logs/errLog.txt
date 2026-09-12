@@ -732,3 +732,4 @@
 2026 09 08	16:14:48	5ca7da31-9e45-4cb7-bd33-fc4571057f8d	MongoServerSelectionError: getaddrinfo ENOTFOUND ac-kvk2pxe-shard-00-01.n0kay20.mongodb.net
 2026 09 08	16:51:19	7452432f-5c00-478c-b7e7-2343c880fe07	TypeError: Cannot set properties of null (setting 'refreshToken')
 2026 09 08	16:58:54	3d2c88e5-daab-438a-a9d6-764bb1978e61	TypeError: Cannot set properties of null (setting 'refreshToken')
+2026 09 10	20:22:05	4efe4877-75fe-496e-9ca4-e1605d31d624	TypeError: Cannot set properties of null (setting 'refreshToken')
